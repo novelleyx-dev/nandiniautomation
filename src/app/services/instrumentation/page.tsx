@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function InstrumentationPage() {
   return (
-    <div className="bg-[#F7F9FC] min-h-screen pt-24 font-sans text-[#0B1F3A]">
+    <div className="bg-[#F7F9FC] min-h-screen pt-24 font-sans text-[var(--color-ne-blue-corp)]">
       
       {/* Hero Section */}
-      <section className="relative bg-[#0B1F3A] py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-[var(--color-ne-blue-corp)] py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <Image 
             src="https://images.unsplash.com/photo-1581093588401-f3c22d7a1f1b?auto=format&fit=crop&w=2000&q=80" 
@@ -25,7 +25,7 @@ export default function InstrumentationPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-outfit leading-tight mb-6">
               Precision <span className="text-blue-400">Process Instrumentation</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-mono">
@@ -43,7 +43,7 @@ export default function InstrumentationPage() {
             {/* Left Content Column */}
             <div className="lg:col-span-8 font-mono text-slate-700 leading-loose space-y-8">
               
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0B1F3A] font-heading">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-ne-blue-corp)] font-outfit">
                 The Nervous System of Your Plant
               </h2>
               
@@ -55,7 +55,7 @@ export default function InstrumentationPage() {
                 Our engineering teams possess deep domain expertise across various process variables, primarily focusing on Pressure, Flow, Level, and Temperature. Whether deploying differential pressure transmitters across a superheated steam line in a power generation plant, or installing hygienic magnetic flow meters in a pharmaceutical blending facility, we strictly adhere to ISA (International Society of Automation) standards and manufacturer-specific deployment guidelines to guarantee zero-defect operational performance.
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0B1F3A] font-heading mt-12 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mt-12 mb-6">
                 Comprehensive Measurement Solutions
               </h3>
               
@@ -67,7 +67,7 @@ export default function InstrumentationPage() {
                 <strong>Level & Temperature Systems:</strong> Reliable level measurement is critical to preventing catastrophic vessel overflows or dry-running pumps. We implement non-contact radar, guided wave radar, and ultrasonic level transmitters engineered to bypass false echoes from agitators or heavy vapors. For temperature control, we supply and calibrate high-accuracy RTDs (PT100) and Thermocouples housed in robust thermowells designed to withstand extreme abrasive environments found in cement kilns and steel foundries.
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0B1F3A] font-heading mt-12 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mt-12 mb-6">
                 Field Installation, Calibration & Loop Checking
               </h3>
 
@@ -86,44 +86,44 @@ export default function InstrumentationPage() {
               
               {/* Capabilities Box */}
               <div className="bg-[#F7F9FC] p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 className="text-xl font-bold text-[#0B1F3A] font-heading mb-6 border-b border-slate-200 pb-4">
+                <h4 className="text-xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mb-6 border-b border-slate-200 pb-4">
                   Instrumentation Focus
                 </h4>
                 <ul className="space-y-4 font-mono text-sm text-slate-700">
                   <li className="flex items-start gap-3">
-                    <Gauge className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Gauge className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Pressure & Differential Transmitters</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Waves className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Waves className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Coriolis & Magnetic Flow Meters</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Activity className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Activity className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Radar & Ultrasonic Level Sensors</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Thermometer className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Thermometer className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>High-Accuracy RTDs & Thermocouples</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Settings2 className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Settings2 className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>HART & Fieldbus Integration</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <PenTool className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <PenTool className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Traceable Calibration Services</span>
                   </li>
                 </ul>
               </div>
 
               {/* CTA Box */}
-              <div className="bg-gradient-to-br from-[#0B1F3A] to-[#0A3D91] p-8 rounded-2xl text-white shadow-xl">
-                <h4 className="text-2xl font-bold font-heading mb-4">Need Calibration?</h4>
+              <div className="bg-gradient-to-br from-[var(--color-ne-blue-corp)] to-[var(--color-ne-blue-steel)] p-8 rounded-2xl text-white shadow-xl">
+                <h4 className="text-2xl font-bold font-outfit mb-4">Need Calibration?</h4>
                 <p className="text-slate-300 font-mono text-sm mb-8 leading-relaxed">
                   Ensure your plant operations are based on accurate data. Contact us for instrument procurement, loop checking, or routine calibration services.
                 </p>
-                <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-4 bg-[#1565C0] hover:bg-blue-500 rounded-lg font-bold transition-colors">
+                <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-ne-blue-steel)] hover:bg-blue-500 rounded-lg font-bold transition-colors">
                   Speak to an Expert <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

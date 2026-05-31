@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function ElevatorSolutionsPage() {
   return (
-    <div className="bg-[#F7F9FC] min-h-screen pt-24 font-sans text-[#0B1F3A]">
+    <div className="bg-[#F7F9FC] min-h-screen pt-24 font-sans text-[var(--color-ne-blue-corp)]">
       
       {/* Hero Section */}
-      <section className="relative bg-[#0B1F3A] py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-[var(--color-ne-blue-corp)] py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <Image 
             src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=2000&q=80" 
@@ -25,7 +25,7 @@ export default function ElevatorSolutionsPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-outfit leading-tight mb-6">
               Industrial <span className="text-blue-400">Elevator</span> Solutions
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-mono">
@@ -43,7 +43,7 @@ export default function ElevatorSolutionsPage() {
             {/* Left Content Column */}
             <div className="lg:col-span-8 font-mono text-slate-700 leading-loose space-y-8">
               
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0B1F3A] font-heading">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-ne-blue-corp)] font-outfit">
                 Vertical Mobility Built for Heavy Industry
               </h2>
               
@@ -55,7 +55,7 @@ export default function ElevatorSolutionsPage() {
                 Our elevator division specializes in the complete lifecycle management of vertical transport systems. This encompasses the custom design and installation of new lifts, the technical modernization of obsolete control systems, and rigorous Annual Maintenance Contracts (AMC). Drawing upon our deep expertise in variable frequency drives (VFDs) and PLC automation, we engineer elevator systems that offer exceptionally smooth ride quality, precise floor leveling, and optimized energy consumption.
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0B1F3A] font-heading mt-12 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mt-12 mb-6">
                 Freight & Heavy Industrial Elevators
               </h3>
               
@@ -67,7 +67,7 @@ export default function ElevatorSolutionsPage() {
                 Furthermore, we recognize the critical importance of safety in industrial lifting. All our freight and passenger elevators are equipped with redundant safety mechanisms, including overspeed governors, progressive safety catches, infrared door curtains, and automatic rescue devices (ARD) that safely evacuate passengers to the nearest floor during a power failure. We strictly adhere to the IS 14665 standards for elevator safety and installation in India.
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0B1F3A] font-heading mt-12 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mt-12 mb-6">
                 Modernization & Preventative Maintenance (AMC)
               </h3>
 
@@ -86,44 +86,44 @@ export default function ElevatorSolutionsPage() {
               
               {/* Capabilities Box */}
               <div className="bg-[#F7F9FC] p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 className="text-xl font-bold text-[#0B1F3A] font-heading mb-6 border-b border-slate-200 pb-4">
+                <h4 className="text-xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mb-6 border-b border-slate-200 pb-4">
                   Elevator Services
                 </h4>
                 <ul className="space-y-4 font-mono text-sm text-slate-700">
                   <li className="flex items-start gap-3">
-                    <Factory className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Factory className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Heavy-Duty Freight Elevators</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <ArrowUpRight className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <ArrowUpRight className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Passenger & Commercial Lifts</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <ArrowDownRight className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <ArrowDownRight className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Hydraulic & Traction Systems</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Settings className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Settings className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Microprocessor & VFD Modernization</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Wrench className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <Wrench className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>Comprehensive AMC Maintenance</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <ShieldCheck className="w-5 h-5 text-[#1565C0] shrink-0" />
+                    <ShieldCheck className="w-5 h-5 text-[var(--color-ne-blue-steel)] shrink-0" />
                     <span>IS 14665 Safety Compliance</span>
                   </li>
                 </ul>
               </div>
 
               {/* CTA Box */}
-              <div className="bg-gradient-to-br from-[#0B1F3A] to-[#0A3D91] p-8 rounded-2xl text-white shadow-xl">
-                <h4 className="text-2xl font-bold font-heading mb-4">Upgrade Your Mobility</h4>
+              <div className="bg-gradient-to-br from-[var(--color-ne-blue-corp)] to-[var(--color-ne-blue-steel)] p-8 rounded-2xl text-white shadow-xl">
+                <h4 className="text-2xl font-bold font-outfit mb-4">Upgrade Your Mobility</h4>
                 <p className="text-slate-300 font-mono text-sm mb-8 leading-relaxed">
                   Experiencing frequent elevator breakdowns? Contact us for a comprehensive site audit, modernization quote, or AMC partnership.
                 </p>
-                <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-4 bg-[#1565C0] hover:bg-blue-500 rounded-lg font-bold transition-colors">
+                <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-ne-blue-steel)] hover:bg-blue-500 rounded-lg font-bold transition-colors">
                   Request an Inspection <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
