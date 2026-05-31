@@ -77,9 +77,9 @@ export default function Home() {
   // Industry-specific curated high-res Unsplash links for B2B trust
   const getIndustryImage = (slug: string) => {
     const images: Record<string, string> = {
-      'steel': 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80',
+      'steel': '/images/steel_plant.png',
       'railways': 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600&q=80',
-      'cement': 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80',
+      'cement': '/images/cement_plant.png',
       'power': 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80',
       'oil-gas': '/images/oil_refinery.png',
       'water-treatment': '/images/water_treatment.png',
