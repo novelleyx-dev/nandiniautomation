@@ -7,7 +7,7 @@ export default function CertificationsPage() {
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -47,7 +47,7 @@ export default function CertificationsPage() {
               className="bg-white border border-slate-200 hover:border-[#2b6cb0] rounded-lg p-8 cursor-pointer shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
             >
               <div>
-                <div className="w-8 h-8 rounded bg-[#f7f9fc] border border-slate-200 flex items-center justify-center text-[#0f4c81] font-bold mb-4 font-mono text-xs shadow-xs">
+                <div className="w-8 h-8 rounded bg-[#E8F0FA] border border-slate-200 flex items-center justify-center text-[#0f4c81] font-bold mb-4 font-mono text-xs shadow-xs">
                   0{index + 1}
                 </div>
                 <h3 className="text-slate-900 font-bold text-sm mb-2 font-outfit group-hover:text-[#0f4c81] transition-colors">
@@ -107,7 +107,7 @@ export default function CertificationsPage() {
             </h3>
             
             <div className="space-y-6 text-sm text-slate-700">
-              <div className="bg-[#f7f9fc] border border-slate-200 p-6 rounded text-center font-mono">
+              <div className="bg-[#E8F0FA] border border-slate-200 p-6 rounded text-center font-mono">
                 <span className="block text-slate-400 text-[10px] mb-2 font-bold">CERTIFICATE ID NUMBER</span>
                 <span className="text-slate-800 font-bold tracking-wider">{selectedCert.number}</span>
                 

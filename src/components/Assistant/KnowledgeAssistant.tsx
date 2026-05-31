@@ -135,7 +135,7 @@ export default function KnowledgeAssistant() {
           </div>
           
           {/* Chat History */}
-          <div className="flex-1 p-4 bg-[#f7f9fc] overflow-y-auto flex flex-col gap-4">
+          <div className="flex-1 p-4 bg-[#E8F0FA] overflow-y-auto flex flex-col gap-4">
             {messages.map((msg) => (
               <div key={msg.id} className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                 <div 

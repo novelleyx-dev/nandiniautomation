@@ -2,7 +2,7 @@
 
 @theme {
   --color-ne-white: #ffffff;
-  --color-ne-bg: #f7f9fc;
+  --color-ne-bg: #E8F0FA;
   --color-ne-gray-light: #eef2f7;
   --color-ne-blue-corp: #0A3D91; /* Deep Royal Blue */
   --color-ne-blue-steel: #1565C0; /* Electric Blue */
@@ -16,7 +16,7 @@
 
 /* Custom Overrides & Scroll Behaviors */
 html, body {
-  background-color: #f7f9fc; /* bg-ne-bg */
+  background-color: #E8F0FA; /* bg-ne-bg */
   color: #1e293b; /* text-ne-text-dark */
 }
 

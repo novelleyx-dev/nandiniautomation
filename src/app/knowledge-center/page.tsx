@@ -475,7 +475,7 @@ export default function KnowledgeCenterPage() {
   });
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -661,7 +661,7 @@ export default function KnowledgeCenterPage() {
             <div className="p-7 space-y-6 text-sm text-slate-700">
               
               {/* Intro */}
-              <div className="bg-[#f7f9fc] border-l-4 border-[#0f4c81] px-5 py-4 rounded-r">
+              <div className="bg-[#E8F0FA] border-l-4 border-[#0f4c81] px-5 py-4 rounded-r">
                 <p className="leading-relaxed text-slate-700">{selectedArticle.content.intro}</p>
               </div>
 

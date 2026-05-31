@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import HeroSlideshow from '@/components/Home/HeroSlideshow';
 import { 
   INDUSTRIES, 
   PRODUCTS, 
@@ -94,89 +95,7 @@ export default function Home() {
     <div className="bg-white text-slate-800 min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 overflow-hidden border-b border-slate-200/60 bg-gradient-to-b from-[#f7f9fc] to-white">
-        {/* Subtle engineering blueprint matrix grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-35" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Side Content */}
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded text-xs font-mono font-bold text-[var(--color-ne-blue-corp)] shadow-sm">
-                <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-                </span>
-                <span>ISO 9001:2015 CERTIFIED ASSEMBLY PLANT</span>
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 font-outfit leading-[1.15]">
-                Engineering Intelligent <br />
-                <span className="bg-gradient-to-r from-[var(--color-ne-blue-corp)] via-[var(--color-ne-blue-steel)] to-blue-400 bg-clip-text text-transparent">
-                  Industrial Automation
-                </span>
-              </h1>
-              
-              <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-                Trusted Industrial Automation, Electrical & Instrumentation Partner for Large-Scale Industries Across India. Authorised system integrations with 25+ years of operational excellence.
-              </p>
-              
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4 pt-4">
-                <a href="#products" className="px-6 py-3 bg-[var(--color-ne-blue-corp)] hover:bg-[var(--color-ne-blue-steel)] text-white font-bold rounded shadow-lg shadow-blue-900/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-sm uppercase tracking-wider">
-                  Explore Solutions
-                </a>
-                <a href="#rfq-section" className="px-6 py-3 bg-white hover:bg-slate-50 text-slate-700 font-bold rounded border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-sm uppercase tracking-wider">
-                  Request Consultation
-                </a>
-              </div>
-              
-              {/* Floating industrial badging indicators */}
-              <div className="pt-8 border-t border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
-                <div className="group">
-                  <span className="block text-[var(--color-ne-blue-corp)] font-bold group-hover:text-[var(--color-ne-blue-steel)] transition-colors">CPRI TESTED</span>
-                  <span className="text-slate-500 text-[10px]">Busbars certified</span>
-                </div>
-                <div className="group">
-                  <span className="block text-[var(--color-ne-blue-corp)] font-bold group-hover:text-[var(--color-ne-blue-steel)] transition-colors">33KV ELECTRICAL LICENSE</span>
-                  <span className="text-slate-500 text-[10px]">Government approved</span>
-                </div>
-                <div className="group">
-                  <span className="block text-[var(--color-ne-blue-corp)] font-bold group-hover:text-[var(--color-ne-blue-steel)] transition-colors">YASKAWA Authorized</span>
-                  <span className="text-slate-500 text-[10px]">Warranty center</span>
-                </div>
-                <div className="group">
-                  <span className="block text-[var(--color-ne-blue-corp)] font-bold group-hover:text-[var(--color-ne-blue-steel)] transition-colors">ABB CHANNEL PARTNER</span>
-                  <span className="text-slate-500 text-[10px]">Authorized integration</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side Visual (Real engineering visual replacement instead of dark dashboard dominance) */}
-            <div className="lg:col-span-5 relative group">
-              <div className="relative mx-auto w-full max-w-[420px] aspect-[4/5] bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xl shadow-blue-900/10 group-hover:shadow-blue-900/20 group-hover:-translate-y-2 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
-                  alt="Industrial Automation Engineer at Control Center"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                
-                {/* Micro tech card overlay */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur border border-slate-200/80 rounded p-4 shadow-lg font-mono text-[10px] space-y-1">
-                  <div className="flex justify-between items-center text-[var(--color-ne-blue-corp)] font-bold">
-                    <span>IDA CHERLAPALLY FACILITY</span>
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  </div>
-                  <p className="text-slate-500 leading-normal text-[9px] font-sans">
-                    Electrical switchyard panels, PLC setups, and Yaskawa load checks active.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSlideshow />
 
       {/* 2. TRUST & SCALE SECTION */}
       <section className="bg-white py-16 relative border-b border-slate-200/60">
@@ -253,7 +172,7 @@ export default function Home() {
       </section>
 
       {/* 3. INDUSTRIES SERVED SECTION */}
-      <section id="industries" className="py-20 relative bg-[#f7f9fc] border-b border-slate-200/60">
+      <section id="industries" className="py-20 relative bg-[#E8F0FA] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold mb-3">
@@ -341,7 +260,7 @@ export default function Home() {
               <div 
                 key={idx}
                 onClick={() => setSelectedProduct(product)}
-                className="bg-[#f7f9fc] hover:bg-white border border-slate-200 hover:border-blue-400 rounded-lg p-8 cursor-pointer shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group"
+                className="bg-[#E8F0FA] hover:bg-white border border-slate-200 hover:border-blue-400 rounded-lg p-8 cursor-pointer shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group"
               >
                 {/* Technical grid blueprint lines */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:1rem_1rem] opacity-20 pointer-events-none" />
@@ -381,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* 5. MAJOR PROJECTS SHOWCASE */}
-      <section id="projects" className="py-20 relative bg-[#f7f9fc] border-b border-slate-200/60">
+      <section id="projects" className="py-20 relative bg-[#E8F0FA] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold mb-3">
@@ -487,7 +406,7 @@ export default function Home() {
           </div>
 
           {/* Workflow Detail Display Card */}
-          <div className="bg-[#f7f9fc] border border-slate-200 p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div className="bg-[#E8F0FA] border border-slate-200 p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="space-y-4 max-w-xl">
               <span className="text-[10px] font-mono text-[var(--color-ne-blue-corp)] uppercase tracking-widest border border-blue-200 bg-blue-50 px-2.5 py-0.5 rounded font-bold">
                 PHASE 0{activeWorkflow + 1} METRIC
@@ -511,7 +430,7 @@ export default function Home() {
       </section>
 
       {/* 7. SERVICE SUPPORT ECOSYSTEM */}
-      <section className="py-20 relative bg-[#f7f9fc] border-b border-slate-200/60">
+      <section className="py-20 relative bg-[#E8F0FA] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -554,15 +473,15 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="bg-[#f7f9fc] p-3 rounded border border-slate-100">
+                  <div className="bg-[#E8F0FA] p-3 rounded border border-slate-100">
                     <span className="block text-slate-450 text-[9px] font-bold">STEP 01: FAULT REPORT</span>
                     <span className="text-slate-700 font-sans">Client log call &rarr; Diagnostic ticket issued in under 15 mins.</span>
                   </div>
-                  <div className="bg-[#f7f9fc] p-3 rounded border border-slate-100">
+                  <div className="bg-[#E8F0FA] p-3 rounded border border-slate-100">
                     <span className="block text-slate-450 text-[9px] font-bold">STEP 02: TELE-ASSESSMENT</span>
                     <span className="text-slate-700 font-sans">Drive expert attempts remote parameter correction over line.</span>
                   </div>
-                  <div className="bg-[#f7f9fc] p-3 rounded border border-slate-100">
+                  <div className="bg-[#E8F0FA] p-3 rounded border border-slate-100">
                     <span className="block text-slate-455 text-[9px] font-bold">STEP 03: ENGINEER DISPATCH</span>
                     <span className="text-slate-700 font-sans">On-site deployment of service team with standard diagnostic tools.</span>
                   </div>
@@ -605,7 +524,7 @@ export default function Home() {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#f7f9fc] border border-slate-200 p-6 rounded flex flex-col justify-between hover:border-blue-300 shadow-sm transition-all cursor-pointer group"
+                className="bg-[#E8F0FA] border border-slate-200 p-6 rounded flex flex-col justify-between hover:border-blue-300 shadow-sm transition-all cursor-pointer group"
               >
                 <span className="text-[var(--color-ne-blue-corp)] font-extrabold text-lg tracking-widest font-mono group-hover:text-blue-700 transition-colors">
                   {partner.name}
@@ -620,7 +539,7 @@ export default function Home() {
       </section>
 
       {/* 9. CERTIFICATIONS & COMPLIANCE SECTION */}
-      <section id="certifications" className="py-20 relative bg-[#f7f9fc] border-b border-slate-200/60">
+      <section id="certifications" className="py-20 relative bg-[#E8F0FA] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold mb-3">
@@ -690,11 +609,11 @@ export default function Home() {
               </p>
               
               <div className="grid grid-cols-2 gap-4 font-mono text-xs">
-                <div className="bg-[#f7f9fc] p-4 rounded border border-slate-200">
+                <div className="bg-[#E8F0FA] p-4 rounded border border-slate-200">
                   <span className="block text-[var(--color-ne-blue-corp)] font-bold mb-1">CHERLAPALLY PLANT</span>
                   <span className="text-slate-500 text-[10px] font-sans">Over 12,000 sq.ft custom shop floor for mechanical and wiring work.</span>
                 </div>
-                <div className="bg-[#f7f9fc] p-4 rounded border border-slate-200">
+                <div className="bg-[#E8F0FA] p-4 rounded border border-slate-200">
                   <span className="block text-[var(--color-ne-blue-corp)] font-bold mb-1">ENGINEERING TEAM</span>
                   <span className="text-slate-500 text-[10px] font-sans">Highly certified design engineers and automation experts on-site.</span>
                 </div>
@@ -703,7 +622,7 @@ export default function Home() {
 
             {/* Vision / Mission / Timelines */}
             <div className="lg:col-span-6">
-              <div className="space-y-6 bg-[#f7f9fc] border border-slate-200 rounded-lg p-8 shadow-sm">
+              <div className="space-y-6 bg-[#E8F0FA] border border-slate-200 rounded-lg p-8 shadow-sm">
                 <div>
                   <h3 className="text-[var(--color-ne-blue-corp)] font-bold text-sm uppercase tracking-wider mb-2 font-mono">
                     OUR CORE MISSION
@@ -727,7 +646,7 @@ export default function Home() {
       </section>
 
       {/* 11. CSR & SEMINARS / EXPOS SECTION */}
-      <section className="py-20 bg-[#f7f9fc] border-b border-slate-200/60">
+      <section className="py-20 bg-[#E8F0FA] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold mb-3">
@@ -772,7 +691,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left font-mono text-xs">
-            <div className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
+            <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
               <span className="text-[9px] text-slate-450 block mb-1">MEDIA ID: V-401</span>
               <h4 className="text-slate-900 font-bold mb-4 font-outfit text-sm">VFD Load Testing Bay Operations</h4>
               <p className="text-xs text-slate-500 font-sans mb-6">
@@ -783,7 +702,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
+            <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
               <span className="text-[9px] text-slate-450 block mb-1">MEDIA ID: S-102</span>
               <h4 className="text-slate-900 font-bold mb-4 font-outfit text-sm">120 MLD PLC Logic Diagrams</h4>
               <p className="text-xs text-slate-500 font-sans mb-6">
@@ -794,7 +713,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
+            <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
               <span className="text-[9px] text-slate-455 block mb-1">MEDIA ID: D-88</span>
               <h4 className="text-slate-900 font-bold mb-4 font-outfit text-sm">Company B2B Product Brochure</h4>
               <p className="text-xs text-slate-500 font-sans mb-6">
@@ -816,7 +735,7 @@ export default function Home() {
       </section>
 
       {/* 13. LEAD GENERATION SYSTEM (SMART FORMS) */}
-      <section id="rfq-section" className="py-20 relative bg-[#f7f9fc]">
+      <section id="rfq-section" className="py-20 relative bg-[#E8F0FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -892,7 +811,7 @@ export default function Home() {
                         value={contactForm.name}
                         onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                       />
                     </div>
                     <div className="space-y-2">
@@ -903,7 +822,7 @@ export default function Home() {
                         value={contactForm.email}
                         onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                         placeholder="john@company.com"
-                        className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -917,7 +836,7 @@ export default function Home() {
                         value={contactForm.phone}
                         onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
                         placeholder="+91-XXXXX-XXXXX"
-                        className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                       />
                     </div>
                     <div className="space-y-2">
@@ -928,7 +847,7 @@ export default function Home() {
                         value={contactForm.company}
                         onChange={(e) => setContactForm({ ...contactForm, company: e.target.value })}
                         placeholder="Steel Corp Ltd"
-                        className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -941,7 +860,7 @@ export default function Home() {
                       onChange={(e) => setContactForm({ ...contactForm, requirement: e.target.value })}
                       placeholder="Specify required panel capacities, PLC series, VFD frame sizes, or support timeline requirements..."
                       rows={4}
-                      className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                      className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                     ></textarea>
                   </div>
 
@@ -1124,7 +1043,7 @@ export default function Home() {
             </h3>
             
             <div className="space-y-6 text-sm text-slate-600">
-              <div className="bg-[#f7f9fc] border border-slate-200 p-6 rounded text-center font-mono">
+              <div className="bg-[#E8F0FA] border border-slate-200 p-6 rounded text-center font-mono">
                 <span className="block text-slate-450 text-[10px] mb-2 font-bold">CERTIFICATE ID NUMBER</span>
                 <span className="text-slate-800 font-bold tracking-wider">{selectedCert.number}</span>
                 

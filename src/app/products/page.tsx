@@ -351,7 +351,7 @@ export default function ProductsPage() {
   const selectedBrand = activeBrand !== null ? brands[activeBrand] : null;
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -405,7 +405,7 @@ export default function ProductsPage() {
               { icon: "📐", title: "Engineering Integration", desc: "We don't just supply equipment — we commission, tune, and integrate every product we sell." },
               { icon: "🕐", title: "24/7 AMC Support", desc: "After-sales service contracts ensuring 4-hour response for critical system failures in Hyderabad." },
             ].map((item, idx) => (
-              <div key={idx} className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-5 flex flex-col gap-2">
+              <div key={idx} className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-5 flex flex-col gap-2">
                 <span className="text-2xl">{item.icon}</span>
                 <h3 className="text-[#0f4c81] font-bold text-sm">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{item.desc}</p>
@@ -560,9 +560,9 @@ export default function ProductsPage() {
                     <h4 className="text-[10px] font-mono uppercase tracking-wider text-[#0f4c81] font-semibold mb-3">
                       Technical Specifications
                     </h4>
-                    <div className="bg-[#f7f9fc] border border-slate-200 rounded overflow-hidden">
+                    <div className="bg-[#E8F0FA] border border-slate-200 rounded overflow-hidden">
                       {selectedBrand.products[activeProduct].specs.map((spec, sIdx) => (
-                        <div key={sIdx} className={`flex justify-between items-center px-4 py-2.5 text-xs font-mono ${sIdx % 2 === 0 ? 'bg-white' : 'bg-[#f7f9fc]'}`}>
+                        <div key={sIdx} className={`flex justify-between items-center px-4 py-2.5 text-xs font-mono ${sIdx % 2 === 0 ? 'bg-white' : 'bg-[#E8F0FA]'}`}>
                           <span className="text-slate-500">{spec.parameter}:</span>
                           <span className="text-slate-900 font-bold text-right max-w-[55%]">{spec.value}</span>
                         </div>

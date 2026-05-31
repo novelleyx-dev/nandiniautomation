@@ -124,7 +124,7 @@ function ContactFormContent() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. John Doe"
-                  className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
+                  className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
                 />
               </div>
               <div className="space-y-2">
@@ -135,7 +135,7 @@ function ContactFormContent() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="e.g. john@company.com"
-                  className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
+                  className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
                 />
               </div>
             </div>
@@ -149,7 +149,7 @@ function ContactFormContent() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="e.g. +91 99999-99999"
-                  className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
+                  className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
                 />
               </div>
               <div className="space-y-2">
@@ -160,7 +160,7 @@ function ContactFormContent() {
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   placeholder="e.g. Cement Works Pvt Ltd"
-                  className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
+                  className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
                 />
               </div>
             </div>
@@ -170,7 +170,7 @@ function ContactFormContent() {
               <select
                 value={formData.type}
                 onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
+                className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
               >
                 <option value="panel">Electrical Panels (PCC, MCC, VFD)</option>
                 <option value="automation">PLC SCADA System Integration</option>
@@ -188,7 +188,7 @@ function ContactFormContent() {
                 onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                 placeholder="Describe structural specifications, busbar short circuit capacity rating, motor HP size, PLC processor family, or breakdown telemetry details..."
                 rows={5}
-                className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
+                className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0f4c81] focus:bg-white font-sans transition-all"
               ></textarea>
             </div>
 
@@ -208,7 +208,7 @@ function ContactFormContent() {
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">

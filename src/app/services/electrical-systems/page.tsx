@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ElectricalSystemsPage() {
   return (
-    <div className="bg-[#F7F9FC] min-h-screen pt-24 font-sans text-[var(--color-ne-blue-corp)]">
+    <div className="bg-[#E8F0FA] min-h-screen pt-24 font-sans text-[var(--color-ne-blue-corp)]">
       
       {/* Hero Section */}
       <section className="relative bg-[var(--color-ne-blue-corp)] py-20 lg:py-32 overflow-hidden">
@@ -85,7 +85,7 @@ export default function ElectricalSystemsPage() {
             <div className="lg:col-span-4 space-y-8">
               
               {/* Capabilities Box */}
-              <div className="bg-[#F7F9FC] p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <div className="bg-[#E8F0FA] p-8 rounded-2xl border border-slate-200 shadow-sm">
                 <h4 className="text-xl font-bold text-[var(--color-ne-blue-corp)] font-outfit mb-6 border-b border-slate-200 pb-4">
                   Electrical Expertise
                 </h4>

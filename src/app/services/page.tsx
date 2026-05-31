@@ -5,7 +5,7 @@ export default async function ServicesPage() {
   const services = getEntries('services');
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-24 bg-white border-b border-slate-200 overflow-hidden">

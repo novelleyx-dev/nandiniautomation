@@ -8,7 +8,7 @@ export default function IndustriesPage() {
   const [activeTab, setActiveTab] = useState<'overview' | 'challenges' | 'solutions' | 'equipment'>('overview');
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -56,15 +56,15 @@ export default function IndustriesPage() {
       <section className="py-12 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-            <div className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-6 space-y-2">
+            <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 space-y-2">
               <h3 className="text-[#0f4c81] font-bold font-outfit">Process Industry Expertise</h3>
               <p className="text-slate-600 leading-relaxed text-xs">Our automation engineers carry deep domain knowledge across continuous process industries including power plants, chemicals, oil & gas, and water treatment — understanding the unique control logic, safety requirements, and regulatory compliance frameworks of each sector.</p>
             </div>
-            <div className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-6 space-y-2">
+            <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 space-y-2">
               <h3 className="text-[#0f4c81] font-bold font-outfit">Manufacturing Sector Solutions</h3>
               <p className="text-slate-600 leading-relaxed text-xs">From cement kiln speed control to sugar centrifugal cycle automation, we deliver sector-specific drive systems and control panels that address the precise engineering challenges of heavy discrete manufacturing, including high inertia loads, thermal stress, and dust contamination.</p>
             </div>
-            <div className="bg-[#f7f9fc] border border-slate-200 rounded-lg p-6 space-y-2">
+            <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 space-y-2">
               <h3 className="text-[#0f4c81] font-bold font-outfit">Government & Infrastructure</h3>
               <p className="text-slate-600 leading-relaxed text-xs">HMWSSB, HMRL, NTPC, RDSO-compliant panels, PESO-approved hazardous area systems — our government project experience spans municipal water boards, railway traction infrastructure, and national energy corporations with zero-tolerance audit requirements.</p>
             </div>
@@ -165,13 +165,13 @@ export default function IndustriesPage() {
                     <p className="leading-relaxed text-slate-655 text-sm">{selectedIndustry.desc}</p>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="bg-[#f7f9fc] border border-slate-200 rounded p-4">
+                    <div className="bg-[#E8F0FA] border border-slate-200 rounded p-4">
                       <h4 className="text-xs uppercase text-slate-400 font-mono tracking-wider font-semibold mb-2">
                         2. Technical Systems Implemented
                       </h4>
                       <p className="text-xs text-slate-600 leading-relaxed font-mono">{selectedIndustry.tech}</p>
                     </div>
-                    <div className="bg-[#f7f9fc] border border-slate-200 rounded p-4">
+                    <div className="bg-[#E8F0FA] border border-slate-200 rounded p-4">
                       <h4 className="text-xs uppercase text-slate-400 font-mono tracking-wider font-semibold mb-2">
                         3. Primary Project Examples
                       </h4>

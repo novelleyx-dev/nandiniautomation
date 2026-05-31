@@ -78,7 +78,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 />
               </div>
               
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 space-y-2">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 space-y-2">
                 <span className="text-slate-400 text-[10px] block">SIMULATED FAULT RESPONSES</span>
                 <div className="flex justify-between">
                   <span>Overload trip timing (at 1.5x Ir):</span>
@@ -130,7 +130,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 />
               </div>
 
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 space-y-2 text-[10px]">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 space-y-2 text-[10px]">
                 <div className="flex justify-between">
                   <span>Feedback flow sensor data:</span>
                   <span className="text-[#0f4c81] font-bold">{(pumpRunning ? (valvePos * 12.5) : 0).toFixed(1)} M3/Hr</span>
@@ -163,7 +163,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                     type="number"
                     value={motorHP}
                     onChange={(e) => setMotorHP(Math.max(1, parseInt(e.target.value) || 0))}
-                    className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-2 py-1 text-slate-800 focus:outline-none focus:border-[#0f4c81] font-sans"
+                    className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-2 py-1 text-slate-800 focus:outline-none focus:border-[#0f4c81] font-sans"
                   />
                 </div>
                 <div className="space-y-1">
@@ -172,12 +172,12 @@ export default function ServicePageClient({ service }: ClientProps) {
                     type="number"
                     value={dutyHours}
                     onChange={(e) => setDutyHours(Math.max(1, Math.min(24, parseInt(e.target.value) || 0)))}
-                    className="w-full bg-[#f7f9fc] border border-slate-200 rounded px-2 py-1 text-slate-800 focus:outline-none focus:border-[#0f4c81] font-sans"
+                    className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-2 py-1 text-slate-800 focus:outline-none focus:border-[#0f4c81] font-sans"
                   />
                 </div>
               </div>
 
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 space-y-2 text-[10px]">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 space-y-2 text-[10px]">
                 <div className="flex justify-between">
                   <span>DOL Starter Daily Consumption:</span>
                   <span className="text-slate-500">{(motorHP * 0.746 * dutyHours).toFixed(1)} kWh</span>
@@ -231,7 +231,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 />
               </div>
 
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 text-[10px] space-y-1.5">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 text-[10px] space-y-1.5">
                 <div className="flex justify-between">
                   <span>Wrist Coordinates (Calculated TCP):</span>
                   <span className="text-slate-800">X: {(450 + (robotAxis1 * 1.2)).toFixed(1)} mm &bull; Y: {(robotAxis2 * 2.1).toFixed(1)} mm</span>
@@ -273,7 +273,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 />
               </div>
 
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 text-[10px] space-y-2">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 text-[10px] space-y-2">
                 <div className="flex justify-between">
                   <span>Process Value Level (PV Sensor):</span>
                   <span className="text-[#0f4c81] font-bold">{tankCurrent}%</span>
@@ -318,7 +318,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 ))}
               </div>
 
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 text-[10px] space-y-1.5">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 text-[10px] space-y-1.5">
                 <div className="flex justify-between">
                   <span>Cabin status indicator:</span>
                   <span className={liftMoving ? 'text-amber-600 font-semibold animate-pulse' : 'text-emerald-700 font-semibold'}>
@@ -352,7 +352,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 </button>
               </div>
 
-              <div className="bg-[#f7f9fc] p-4 rounded border border-slate-150 text-[10px] space-y-2">
+              <div className="bg-[#E8F0FA] p-4 rounded border border-slate-150 text-[10px] space-y-2">
                 <div className="flex justify-between">
                   <span>Phase currents matching:</span>
                   <span className="text-slate-800">{!breakerTripped ? 'R: 142A | Y: 140A | B: 141A' : '0A (No current flow)'}</span>
@@ -770,7 +770,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                     </span>
                   </button>
                   {activeAccordion === mIdx && (
-                    <div className="px-5 py-4 bg-[#f7f9fc] text-xs leading-relaxed text-slate-600 border-t border-slate-100 font-sans">
+                    <div className="px-5 py-4 bg-[#E8F0FA] text-xs leading-relaxed text-slate-600 border-t border-slate-100 font-sans">
                       {maint}
                     </div>
                   )}
@@ -789,7 +789,7 @@ export default function ServicePageClient({ service }: ClientProps) {
                 <div 
                   key={docIdx}
                   onClick={() => alert(`Document "${doc.name}" has been queued for secure download from portal.`)}
-                  className="p-3 bg-[#f7f9fc] border border-slate-150 rounded hover:border-[#0f4c81] cursor-pointer flex justify-between items-center transition-all group"
+                  className="p-3 bg-[#E8F0FA] border border-slate-150 rounded hover:border-[#0f4c81] cursor-pointer flex justify-between items-center transition-all group"
                 >
                   <div>
                     <span className="text-slate-800 group-hover:text-[#0f4c81] font-semibold transition-colors block text-[10px]">

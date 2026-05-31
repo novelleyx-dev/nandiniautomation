@@ -48,7 +48,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800">
       
       {/* 1. Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -66,15 +66,15 @@ export default function AboutPage() {
                 Bringing Excellence in Business relationships and values, our company is a perfect blend of &apos;highly professional Sales Engineers&apos; and &apos;strong Technical Service Engineers&apos;.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
-                <div className="border border-slate-200 bg-[#f7f9fc] rounded px-4 py-2 text-center shadow-xs">
+                <div className="border border-slate-200 bg-[#E8F0FA] rounded px-4 py-2 text-center shadow-xs">
                   <span className="block text-2xl font-bold text-[#0f4c81] font-outfit">25+</span>
                   <span className="text-[10px] text-slate-500 uppercase font-semibold font-mono">Years Exp</span>
                 </div>
-                <div className="border border-slate-200 bg-[#f7f9fc] rounded px-4 py-2 text-center shadow-xs">
+                <div className="border border-slate-200 bg-[#E8F0FA] rounded px-4 py-2 text-center shadow-xs">
                   <span className="block text-2xl font-bold text-[#0f4c81] font-outfit">500+</span>
                   <span className="text-[10px] text-slate-500 uppercase font-semibold font-mono">Projects Done</span>
                 </div>
-                <div className="border border-slate-200 bg-[#f7f9fc] rounded px-4 py-2 text-center shadow-xs">
+                <div className="border border-slate-200 bg-[#E8F0FA] rounded px-4 py-2 text-center shadow-xs">
                   <span className="block text-2xl font-bold text-[#0f4c81] font-outfit">14+</span>
                   <span className="text-[10px] text-slate-500 uppercase font-semibold font-mono">Sectors</span>
                 </div>

@@ -29,7 +29,7 @@ export default function ProjectsPage() {
     : PROJECTS.filter(p => p.industry.toUpperCase() === activeFilter);
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Hero Section */}
       <section className="relative py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -221,7 +221,7 @@ export default function ProjectsPage() {
             <div className="p-8 space-y-6 text-sm text-slate-700">
               
               {/* Scope */}
-              <div className="bg-[#f7f9fc] border border-slate-200 rounded p-5">
+              <div className="bg-[#E8F0FA] border border-slate-200 rounded p-5">
                 <h4 className="text-xs uppercase text-[var(--color-ne-blue-corp)] font-mono tracking-wider font-semibold mb-2">1. Project Scope & Deliverables</h4>
                 <p className="leading-relaxed text-slate-655">{selectedProject.scope}</p>
                 {selectedProject.deliverables && (

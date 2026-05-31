@@ -69,7 +69,7 @@ export default async function ServicePage({ params }: PageProps) {
   }
 
   return (
-    <div className="bg-[#f7f9fc] min-h-screen text-slate-800 font-sans">
+    <div className="bg-[#E8F0FA] min-h-screen text-slate-800 font-sans">
       
       {/* Service Header / Hero Section */}
       <div className="relative py-24 bg-white border-b border-slate-200 overflow-hidden">
@@ -88,13 +88,13 @@ export default async function ServicePage({ params }: PageProps) {
               {service.subtitle}
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
-              <span className="bg-[#f7f9fc] border border-slate-200 text-[10px] uppercase font-mono px-2.5 py-1 text-slate-600 rounded shadow-xs">
+              <span className="bg-[#E8F0FA] border border-slate-200 text-[10px] uppercase font-mono px-2.5 py-1 text-slate-600 rounded shadow-xs">
                 Erection & ESE Certified
               </span>
-              <span className="bg-[#f7f9fc] border border-slate-200 text-[10px] uppercase font-mono px-2.5 py-1 text-slate-600 rounded shadow-xs">
+              <span className="bg-[#E8F0FA] border border-slate-200 text-[10px] uppercase font-mono px-2.5 py-1 text-slate-600 rounded shadow-xs">
                 ISO 9001:2015 Approved
               </span>
-              <span className="bg-[#f7f9fc] border border-slate-200 text-[10px] uppercase font-mono px-2.5 py-1 text-slate-600 rounded shadow-xs">
+              <span className="bg-[#E8F0FA] border border-slate-200 text-[10px] uppercase font-mono px-2.5 py-1 text-slate-600 rounded shadow-xs">
                 turnkey execution
               </span>
             </div>
