@@ -63,7 +63,7 @@ export default function Home() {
   const [inquiryType, setInquiryType] = useState('quote');
   const [rfqSubmitted, setRfqSubmitted] = useState(false);
   const [contactForm, setContactForm] = useState({
-    name: '', email: '', phone: '', company: '', requirement: ''
+    name: '', email: '', phone: '', company: '', extraField: '', requirement: ''
   });
 
   const handleInquirySubmit = (e: React.FormEvent) => {
@@ -71,9 +71,47 @@ export default function Home() {
     setRfqSubmitted(true);
     setTimeout(() => {
       setRfqSubmitted(false);
-      setContactForm({ name: '', email: '', phone: '', company: '', requirement: '' });
+      setContactForm({ name: '', email: '', phone: '', company: '', extraField: '', requirement: '' });
     }, 5000);
   };
+
+  const getFormConfig = () => {
+    switch (inquiryType) {
+      case 'quote':
+        return {
+          extraFieldLabel: 'Product Category / Brand Preference',
+          extraFieldPlaceholder: 'e.g. Yaskawa VFD, Siemens PLC, Custom Panel...',
+          textareaLabel: 'RFQ Specifications & Bill of Materials',
+          textareaPlaceholder: 'Please describe required capacities, configurations, and quantity...',
+          buttonText: 'Submit RFQ Request'
+        };
+      case 'consult':
+        return {
+          extraFieldLabel: 'Preferred Contact Time / Timezone',
+          extraFieldPlaceholder: 'e.g. Weekdays 10 AM - 12 PM IST',
+          textareaLabel: 'Consultation Topic & Plant Challenges',
+          textareaPlaceholder: 'Describe your current manufacturing bottleneck, automation upgrade needs, or energy efficiency goals...',
+          buttonText: 'Request Engineering Consultation'
+        };
+      case 'support':
+        return {
+          extraFieldLabel: 'Equipment Serial No. / Model Number',
+          extraFieldPlaceholder: 'e.g. CIMR-AD4A0039FAA',
+          textareaLabel: 'Fault Description & Error Codes',
+          textareaPlaceholder: 'Specify error codes, breakdown symptoms, or required repair turnaround time...',
+          buttonText: 'Submit Support Ticket'
+        };
+      default:
+        return {
+          extraFieldLabel: 'Additional Reference',
+          extraFieldPlaceholder: '...',
+          textareaLabel: 'Requirements Description',
+          textareaPlaceholder: 'Specify details...',
+          buttonText: 'Submit Request'
+        };
+    }
+  };
+
 
   // Industry-specific curated high-res Unsplash links for B2B trust
   const getIndustryImage = (slug: string) => {
@@ -847,29 +885,40 @@ export default function Home() {
                         value={contactForm.company}
                         onChange={(e) => setContactForm({ ...contactForm, company: e.target.value })}
                         placeholder="Steel Corp Ltd"
-                        className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[10px] font-mono text-slate-500 uppercase">Technical Scope / Requirements Description</label>
+                    <label className="text-[10px] font-mono text-slate-500 uppercase">{getFormConfig().extraFieldLabel}</label>
+                    <input
+                      type="text"
+                      value={contactForm.extraField}
+                      onChange={(e) => setContactForm({ ...contactForm, extraField: e.target.value })}
+                      placeholder={getFormConfig().extraFieldPlaceholder}
+                      className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-mono text-slate-500 uppercase">{getFormConfig().textareaLabel}</label>
                     <textarea
                       required
                       value={contactForm.requirement}
                       onChange={(e) => setContactForm({ ...contactForm, requirement: e.target.value })}
-                      placeholder="Specify required panel capacities, PLC series, VFD frame sizes, or support timeline requirements..."
+                      placeholder={getFormConfig().textareaPlaceholder}
                       rows={4}
-                      className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                      className="w-full bg-[#E8F0FA] border border-slate-200 rounded px-3 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
                     ></textarea>
                   </div>
 
                   {/* Formspree submission hooks simulated */}
                   <button
                     type="submit"
-                    className="w-full py-3 bg-gradient-to-r from-[var(--color-ne-blue-corp)] to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded text-xs uppercase tracking-wider transition-colors"
+                    className="w-full py-3 bg-gradient-to-r from-[var(--color-ne-blue-corp)] to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
                   >
-                    Submit Technical Request
+                    {getFormConfig().buttonText}
                   </button>
                 </form>
               )}
