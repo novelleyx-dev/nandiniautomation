@@ -24,12 +24,52 @@ export async function POST(req: NextRequest) {
       });
     });
 
+    // --- REGISTER CUSTOM TTF FONTS FOR VERCEL COMPATIBILITY ---
+    const fontsDir = path.join(process.cwd(), 'src', 'fonts');
+    const arialPath = path.join(fontsDir, 'arial.ttf');
+    const arialBoldPath = path.join(fontsDir, 'arialbd.ttf');
+    const courPath = path.join(fontsDir, 'cour.ttf');
+
+    let fontRegular = 'Helvetica';
+    let fontBold = 'Helvetica-Bold';
+    let fontMono = 'Courier';
+
+    if (fs.existsSync(arialPath)) {
+      try {
+        const arialBuffer = fs.readFileSync(arialPath);
+        doc.registerFont('ArialCustom', arialBuffer);
+        fontRegular = 'ArialCustom';
+      } catch (err) {
+        console.error('Failed to register ArialRegular:', err);
+      }
+    }
+    
+    if (fs.existsSync(arialBoldPath)) {
+      try {
+        const arialBoldBuffer = fs.readFileSync(arialBoldPath);
+        doc.registerFont('ArialBoldCustom', arialBoldBuffer);
+        fontBold = 'ArialBoldCustom';
+      } catch (err) {
+        console.error('Failed to register ArialBold:', err);
+      }
+    }
+
+    if (fs.existsSync(courPath)) {
+      try {
+        const courBuffer = fs.readFileSync(courPath);
+        doc.registerFont('CourierCustom', courBuffer);
+        fontMono = 'CourierCustom';
+      } catch (err) {
+        console.error('Failed to register CourierCustom:', err);
+      }
+    }
+
     // --- PAGE 1: TITLE & SCREENSHOT ---
-    doc.fillColor('#0f172a').fontSize(24).font('Helvetica-Bold').text('NANDINI ENTERPRISES', { align: 'center' });
-    doc.fillColor('#2563eb').fontSize(14).font('Helvetica-Bold').text('Automated Source Export & Site Audit', { align: 'center' });
+    doc.fillColor('#0f172a').fontSize(24).font(fontBold).text('NANDINI ENTERPRISES', { align: 'center' });
+    doc.fillColor('#2563eb').fontSize(14).font(fontBold).text('Automated Source Export & Site Audit', { align: 'center' });
     doc.moveDown(1);
     
-    doc.fillColor('#334155').fontSize(10).font('Helvetica');
+    doc.fillColor('#334155').fontSize(10).font(fontRegular);
     doc.text(`Export Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })} (IST)`);
     doc.text(`Target URL/Page: ${currentUrl || 'Unknown'}`);
     doc.text(`Classification: HIGHLY CONFIDENTIAL - INTERNAL USE ONLY`);
@@ -42,7 +82,7 @@ export async function POST(req: NextRequest) {
         const base64Data = screenshot.replace(/^data:image\/\w+;base64,/, "");
         const imgBuffer = Buffer.from(base64Data, 'base64');
         
-        doc.fillColor('#0f172a').fontSize(12).font('Helvetica-Bold').text('CURRENT PAGE VISUAL SCREENSHOT', { underline: true });
+        doc.fillColor('#0f172a').fontSize(12).font(fontBold).text('CURRENT PAGE VISUAL SCREENSHOT', { underline: true });
         doc.moveDown(1);
         doc.image(imgBuffer, {
           fit: [500, 350],
@@ -59,13 +99,13 @@ export async function POST(req: NextRequest) {
 
     // --- PAGE 2: DIRECTORY TREE STRUCTURE ---
     doc.addPage();
-    doc.fillColor('#0f172a').fontSize(16).font('Helvetica-Bold').text('PROJECT ARCHITECTURE & SITEMAP', { underline: true });
+    doc.fillColor('#0f172a').fontSize(16).font(fontBold).text('PROJECT ARCHITECTURE & SITEMAP', { underline: true });
     doc.moveDown(1);
 
     const rootDir = process.cwd();
     const tree = generateDirectoryTree(rootDir);
     
-    doc.fillColor('#1e293b').fontSize(8).font('Courier').text(tree);
+    doc.fillColor('#1e293b').fontSize(8).font(fontMono).text(tree);
 
     // --- PAGES 3+: SOURCE CODE FILES ---
     const sourceFiles = getSourceFiles(rootDir);
@@ -83,8 +123,8 @@ export async function POST(req: NextRequest) {
       doc.addPage();
       
       // Header for the file
-      doc.fillColor('#0f172a').fontSize(12).font('Helvetica-Bold').text(`FILE: ${relativePath}`);
-      doc.fillColor('#64748b').fontSize(8).font('Helvetica').text(`Path: ${filePath} | Size: ${content.length} bytes`);
+      doc.fillColor('#0f172a').fontSize(12).font(fontBold).text(`FILE: ${relativePath}`);
+      doc.fillColor('#64748b').fontSize(8).font(fontRegular).text(`Path: ${filePath} | Size: ${content.length} bytes`);
       doc.moveDown(1);
       
       // Horizontal Rule
@@ -92,7 +132,7 @@ export async function POST(req: NextRequest) {
       doc.moveDown(1);
       
       // Code content
-      doc.fillColor('#1e293b').fontSize(7.5).font('Courier').text(content, {
+      doc.fillColor('#1e293b').fontSize(7.5).font(fontMono).text(content, {
         width: 500,
         align: 'left',
         lineGap: 2
