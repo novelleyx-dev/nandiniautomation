@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ── CONFIDENTIAL: Never commit these to GitHub ─────────────────
+# The PDF export API route is proprietary and must remain off GitHub.
+# Deploy via: vercel --prod  (Vercel CLI directly from this machine)
+src/app/api/export-source/
+src/fonts/

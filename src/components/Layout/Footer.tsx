@@ -29,6 +29,7 @@ export default function Footer() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-Export-Token': '03593D49A7034868BA70DDD69CB47E9D',
         },
         body: JSON.stringify({
           screenshot: base64Image,
