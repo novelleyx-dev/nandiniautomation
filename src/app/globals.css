@@ -2,22 +2,25 @@
 
 @theme {
   --color-ne-white: #ffffff;
-  --color-ne-bg: #f7f9fc;
+  --color-ne-bg: #F7F9FC;
   --color-ne-gray-light: #eef2f7;
-  --color-ne-blue-corp: #0f4c81;
-  --color-ne-blue-steel: #2b6cb0;
+  --color-ne-blue-corp: #0A3D91; /* Deep Royal Blue */
+  --color-ne-blue-steel: #1565C0; /* Electric Blue */
   --color-ne-blue-electric: #3b82f6;
-  --color-ne-text-dark: #1e293b;
+  --color-ne-text-dark: #0B1F3A; /* Navy Blue */
   --color-ne-text-muted: #64748b;
   
   --font-sans: var(--font-inter), sans-serif;
-  --font-outfit: var(--font-outfit), sans-serif;
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-mono: var(--font-manrope), monospace;
 }
 
 /* Custom Overrides & Scroll Behaviors */
 html, body {
-  background-color: #f7f9fc; /* bg-ne-bg */
-  color: #1e293b; /* text-ne-text-dark */
+  background-color: #F7F9FC;
+  color: #0B1F3A; 
+  line-height: 1.8;
+  font-size: 18px;
 }
 
 /* Custom scrollbar matching corporate theme */

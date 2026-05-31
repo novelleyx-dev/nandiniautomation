@@ -1,0 +1,166 @@
+Our Team | Nandini  Enterprises addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);		function hideURLbar(){ window.scrollTo(0,1); } 	jQuery(document).ready(function($) {		$(".scroll").click(function(event){					event.preventDefault();			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);		});	});			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/nandiniautomation.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.19"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+/*  */
+			/*
+You can add your own CSS here.
+Click the help icon above to learn more.
+*/
+				 Email: info@nandiniautomation.com				 Phone: +91-40-23190131									Home
+About Us
+	Our Team
+	Vision &#038; Mission
+	Quality Assurance
+	Our Principles
+Range of Products
+	AC Drives &#038; Motion Control
+	Process Control Instruments (PLC, SCADA &#038; HMI)
+	Field Instruments
+	Sensors &#038; Transducers
+	Robotics
+	MCC/PCC/LT Panels
+Industries
+	Oil &#038; Gas
+	Pharmaceuticals
+	Power
+	Chemical
+	Water &#038; Waste Water
+	Food &#038; Beverages
+	Building Management System
+	Automobile
+	Paper&#038; Pulp
+	Solar
+	Railways
+	Cement
+	Infrastructure
+Services
+	Drives
+	Erections, Installation &#038; Commissioning
+	Design Engineering
+Resources
+	Achievements  &#038; Milestones
+	Our Customers
+	Branding &#038; Promotions
+	Client Testimonials
+	Certificates
+Life at Nandini
+								$( "span.menu" ).click(function() {								$( "ul.nav1" ).slideToggle( 300, function() {								 // Animation complete.								});								});		Our Team	
+		Management
+Mr. Maruti Marlapalle – Managing Partner
+B.Tech. Instrumentation from Chandrapur Govt Collage, PGDBA.
+Has a Unique blend of Core Technical &amp; Excellent marketing Skills for more than 15 Years in the field of Electrical, Instrumentation and Automation.Founder of ‘NANDINI ENTERPRISES’ – Started in the year 2007 with a team of 5, L&amp;T Dealership and a strong customer base.A strong believer of the word “Customer Satisfaction” and with a passion to excel and contribute to the society, Leads the team with a vision to make ‘NANDINI ENTERPRISES’ as a leader in the field of Electrical and Industrial automation. He stands as a true inspiration to the team and strives to make each and every team member achieve their goals. His vision, dedication and hard work made him achieve many milestones and awards which made him to stand as one among many.
+Mrs. Pratima Maruti Marlapalle –Partner
+Graduate in Computer Science, and NIITian
+Started her Career as HR Executive for Polaris Software and Zieta Technologies. Soon thereafter, she took charge as the Partner of NANDINI ENTERPRISES.As a Partner of NANDINI ENTERPRISES since 2011 she is instrumental in handling the portfolios of Employee Management, Finance, Stock Management and Supplier – Customer relationship. Her foresight and vision played a key role in shaping the growthof the Organization. With a humble and kind heart nature she creates a friendly and panic free environment among the employees which allows them to express their views and contribute to the organization in every possible way.With a short-term course on Business Management from IIM Lucknow, as an added star to her talent made her to grab the ‘Successful Women Business Partner’ award by L&amp;T.
+Sales and Support
+Mr. Srinivas
+Manager Sales &amp; Services &#8211; AP
+He is having more than 20 years experience in Instrumentation, Automation and has excellent Technical n Marketing skills. He is having very good contacts in Steel and Cement Industries in and around Vishakhapatnam which is main stream of business for us in AP area.With his has extraordinary communication skills and humble nature, he wins many customer harts and he maintains those business relationships. His good relation with all team mates, customers, suppliers and principles proves him handy in closing turnkey project orders.
+Mr. Subrahmanyam Gavalapalli
+Manager- sales and service &#8211; Elevators Segment.
+He is working with Nandini since 2007 and having total 10 years of experience.Sound Technical knowledge and Hardworking go side by side with consistency. Having challenging knowledge on Yaskawa Drives and Elevators, being one of the biggest application of the VFD he is unbeatable master of his field. He makes sure he achieves his targets for pre and post sale activates like order value, payment collection value and service revenue. He is know as the first and best employee of Nandini Enterprises.
+Mr. Kedar Reddy
+Manager BD is B Tech(E&amp;TC), Handling YASKAWA Industrial drive sales.
+Working with Nandini since 2013 and having total 5 years of experience. His Highly professional and techno commercial approach made us win many orders. His transparency and clarity in his work starting from offer submission, model selection, delivery time and scope of work gives a major advantage during execution. His go get it attitude is a major Plus for the organization. He has a very good application oriented knowledge in various industries like Crane, Cement, Textile, Rubber, packaging, Paint etc&#8230; He is highly dedicated and responsible towards his role in the organization.
+Mrs. Seema Godbole 
+She is a “Performance Driven Professional” with successful operational excellence of over 23 years. Made a mark with Operations Management, focusing on maximizing customer satisfaction, Process improvement initiatives to achieve maximum efficiency in various operations. Possess ability in coordinating with internal/external customers for running successful business operations and experience of implementing procedures and service standards for business excellence. Her Core Competencies are: Customer Engagement, Team Management, Interpersonal Communication, Quality Management, Inside Sales and Supplier Relations.
+Mr. Sri Bharath
+B.E (Electronics and Instrumentation)
+Business Development Manager is a Solution focused proactive and industrious B.E (Electronics and Instrumentation) professional with 4 years experience in Process Control and Industrial Instrumentation. His interest towards Industrial Automation helps the organization in addressing the customer’s requirement technically. His core expertise is in Pharmaceutical, Dairy, Infrastructure, Rubber and Wire drawing applications.
+Mr. Ravichandra
+MBA in Marketing and technical degree in Electronics and Communication Engineering
+Mr. Ravichandra an ambitious young talent keenly focused up on customer’s satisfaction
+Design and Execution Team
+Mr. B Venkat
+B. Tech (EEE)
+Design Manager is having vast knowledge of designing all types of panels. He is working with Nandini since 2010 and is having total 12 years of experience in the same field. Presently handling complete Panel Division starting from Estimations, drawing submission, Manufacturing, Testing, Inspection, and Erection till commission.Has successful handled many turnkey jobs n projects in various fields and is an imp diamond in our Team. He is also a active participator of all team activities that makes him a key contributor.
+Mr. Shaik Nazeer 
+B. Tech (EEE)
+Mr. Shaik Nazeer having 25 years experience in Engineering and Erection &amp; Commissioning. Expertise in handling ESP and Boiler Applications such as Grinding, Bawl Mill, Vertical Mill, Roller Mills, Hydraulics, Pre Heater Systems, Cooler, Crusher, Coal Injection System, HP Bowl Mill, SM29 Bowl Mill. Independently Executed Cement, Power and Industrial Boiler Projects.
+Mrs. Sravani
+Mrs. Sravani is assisting Mr. Venkat and is working with Nandini since 2014. Though having only 3 years of experience her performance is admirable and is strength for the Panel Team. She is a fast learner with good logical skills that makes her a multitasking employee.
+Mr. K. Surya 
+B. Tech (EEE)
+Mr. K. Surya is assisting Mr. Venkat for designing all types of panels. He is having total 7 years of Experience. He is also actively involved in testing of panels at the time of Execution.
+Mr. SV Rao
+Mr. SV Rao is supervising all the panel’s manufacturing &amp; executions at our Factory. He is having an experience of 20 years in panel manufacturing field. He also takes care of switchgear procurement &amp; maintaining of switchgear stock.
+Projects Head
+Mr. Jayachandra Y.
+Mr. Jayachandra Y started currier with Nandini after completing his Engineering and training in Prolific on PLC, SCADA. He has worked on various VFD applications and served vast industries. At present he is positioned as Projects Head and is responsible for all our project’s execution starting from Order acceptation, site visit, drawing approval, internal testing of product before inspection call, handling inspections and dispatch arrangements.
+Mr. Dileep S.
+B. Tech (EEE)
+Mr. Dileep S. Is having 8 years experience in Project and Site Execution.Recently employed by us and is working under Mr. Jayachandra.
+Service &amp; Repair Team
+Mr. Mohammed Omair Nasser
+B. Tech (EEE)
+Mr. Mohammed Omair Nasser is working with Nandini since 2013 and having total experience of 4 years. He has handled many critical applications individually. He is a cool minded, technically strong senior engineer that makes him perfect to work in critical applications.
+Mr. Durgesh Lalaji
+ITI electronics
+Mr. Durgesh Lalaji, is working with Nandini since 2008 and having hands on expertise on Yaskawa VFDs Commissioning and Servicing. He is also actively involved in VFD Repairs. He handles Elevator Customer’s sales, service and maintenance part.
+Mr. Nagababu K 
+B. Tech (ECE)
+Mr. Nagababu K, having total of 5 years of experience. His patience and technical skills help him handle Government projects. He is good in on-site services and executions. After getting exposure in Service and Projects in Hyderabad, he is now based in Vishakhapatnam: Nandini’s Branch Office. Hi is also supporting Sales activity for all corporate n government sectors of that region.
+Mr. Junaid
+B. Tech (ECE)
+Mr. Junaid is B Tech (ECE), PGDIA has joined as a fresher and is working on VFD, PLC and HMI. He has the capability to individually handle the service calls. His gentle nature allows us to get good customer satisfaction in all his service calls.
+Mr. Gangadhar Rao
+B. Tech (ECE)
+Mr. Gangadhar Rao, Joined Nandini as trainee and now having 2 years of experience, he is extremely talented and his growth is significant. We call him Dynoman as he has done remarkable job in Railways in Dyno Drive Test bench commissioning and their maintenances. He is a good team player and never has a word NO in his mouth for any kind of work.
+Mr. Mithilesh
+B. Tech (ECE)
+Mr. Mithilesh, plays a key role in installations &amp; service related issues. After getting training from YASKAWA and internal training from Team Nandini seniors he has become perfect in VFD Installation for all applications.
+Mr. Dnyandev
+Mr. Dnyandev &#8211; shows great interest in learning &amp; growing as a strong technical professional, he has the ability to install and commission the VFD single handed and has experience in electrical works like cable laying, fitting, fabrication, etc.
+Instrumentation
+Mr. Hussain Pasha
+BE (EEE)
+Mr. Hussain Pasha, having 5 years of experience in PLC, SCADA, Servo &amp; AC Drives. He has served Industries like Water Treatment, Power, Cement, Steel, Packing, CNC Machine, Process, Sugar, Oil &amp; Refinery, and etc. He has trained two engineers under him who supports him in programming and site executions. He also handles service calls i.e. identifies the problem, assign a service engineer for that work and get the call closed. He supports all other services engineers via telephone when ever required. He has recently been awarded for his “excellence in service”.
+Mr. Syed Umais
+BTECH (ECE) professional with a PG diploma in Industrial automation
+Syed Umais working in our organization since 2 years. Has proved his presence to be valuable with his extended support in all the service calls attended &amp; project executions till date.
+Accounts
+Mr. B V Rao
+B Com
+Mr. B V Rao working with Nandini since 2008 and having total 15 years of experience in Accounting, Banking, Finance and Taxing. With a vast knowledge in accounts and taxation can individually handle 2-Digit turnover company Balance Sheet confidently. Day to day Tally entries, Invoicing, Dispatch related documentation are few of his daily works.
+Mr. Narsimulu Bynagari
+B Com
+Mr. Narsimulu Bynagari, is having 6 years of experience in Nandini and is very good in Tender, ISO and all finance related Document maintaining. Well versed with Digital/E –Com Technology. He acts as an in direct Human Resource and maintains all the employee data and documents. Our Team depend on him for all the documentation related needs like PBG’s , as he maintains all data in a handy and user friendly way.
+Mr. Sridhar
+B Com
+Mr. Sridhar, His main focus is on Payment Follow up and collection. His prompt Payment follow up plays important role in smooth execution of organizations Payment Cycle. His Contacts in Accounts n Purchase Section and promptness are his strengths. As he is always in the field
+Purchase and E-Procurement
+Mrs. Rani Bollam
+Mrs. Rani Bollam is a Commerce graduate with an experience of 18 Years. Presently working as Purchase Manager &#8211; handling all purchases and doing E-procurement. Also very well versed with E-Tendering which is a future of material procurement process for most of the companies in this Digital World. Being a senior employee she shares her experience by guiding Stores, Admin, Dispatch and Repairs departments as well. She had done remarkable job in Vendor registrations for E-Tendering in many corporations like NFC, HPCL, MIDHANI, APGENCO, MCFL etc…
+Mr. Anil Kumar Sahoo
+B.Com Computer graduate with extra ordinary Digital Marketing skills
+Mr. Anil Kumar Sahoo, Designs all Brochures, Invitation Cards, E-Cards, Power Point Presentations, Web Page maintenance of Nandiniautomation.com and an active blogger for Nandini Enterprises.He is looking after E-Tendering and related Documents maintenance.
+Stores
+Mr. Puli Srinivas Rao 
+B Com
+Mr. Puli Srinivas Rao – B Com graduate who is currently take care of all Logistics activates and stock movements like stock inputs, maintenance, Dispatches and preparing stock statements He is working with Nandini since 2012. And is having total 15 years of experience in the similar field.
+Mr. Ravi
+Mr. Ravi &#8211; who has a vast experience in various industries for more than 25 years &amp; contributes to the organization with his contacts and takes care of the auditing of purchase bills, stock inventory, sales invoices and taxations,.
+Mr. Mallikarjuna
+Mr. Mallikarjuna with an expertise in electrical jobs and a great interest in learning and giving an extended hand to our organization in service, installations and site executions.
+Mr. Neelesh
+Mr. Neelesh He is a hardworking and dedicated Admin Executive who handles the transportation for small dispatches and material procurement.
+					Search for:
+				Products
+ 	AC Drives &amp; Motion Control 	PLC, SCADA &amp; HMI 	Field Instruments 	Sensors &amp; Transducers 	Robotics 	MCC/PCC/LT Panels 	Solar Products				Services
+ 	Drives 	Erections, Installation &amp; Commissioning 	Design Engineering	ABOUT NANDINIWe are a group of intellectuals operating as a team under one roof by the name of Nandini Enterprise. Established in the year 2006,we have achieved many milestones along the way delivering growth and increasing our human resourcTHE TAGSAC Variable Frequency Drives. Programmable Logic Controllers. Material procurement.Testing & Calibration. Trend display. Graphical data display. Alarm annunciation.Fast delivery.ContactTelanganaPlot No.35, 1st.Floor, Opp: SBI, Shapurnagar - Jeedimetla, HYDERABAD - 500 055.Maharashtra	J135, MIDC Bhosari, Bhosari, Pune 411026.			ABOUT NANDINI			We are a group of intellectuals operating as a team under one roof by the name of Nandini Enterprise. Established in the year 2006, 				we have achieved many milestones along the way delivering growth and increasing our human resource		 -->			THE TAGS					AC Variable Frequency Drives.					Programmable Logic Controllers.					  Material procurement.					 Testing & Calibration.					 Trend display.					Graphical data display.					Alarm annunciation.					Fast delivery. -->					strategy					development					css					photoshop					photography					html					awesome					strategy					development-->			IMPORTANT LINKS				FAQ				Site Map		 -->			ENQUIRYFORM					Name
+					Company
+					Phone
+					Email
+					Remarks
+			 -->				 |				© Copyright 2017 :: All Rights Reserved			Website Design by Isha Technohub	var baseurl = 'https://nandiniautomation.com';	var ajaxurl = baseurl + '/wp-admin/admin-ajax.php';	$(document).ready(function(){		$("#Category").on("change",function(){			$('#loading').show();			$.ajax({			    type: "POST",			    url: ajaxurl,			    data: {'action':'fetch_cities','stateid': $(this).val()},			    dataType: "json",			    success: function(result){ 			        //console.log(result.data);			        if (result.success) {			        	$("#SubCategoryy").html(result.data);			        	$('#loading').hide();			        }			    }			});		});		$("#SubCategoryy").on("change",function(){			$('#loading').show();			$.ajax({			    type: "POST",			    url: ajaxurl,			    data: {'action':'filter_branch_list','stateid': $(this).val()},			    dataType: "json",			    success: function(result){ 			        //console.log(result.data);			        if (result.success) {			        	$("#result_data").html(result.data);			        	$("#NoResultFound").hide();			        	$('#loading').hide();			        }			        else			        {			        	$("#result_data").empty();			        	$("#NoResultFound").show();			        	$('#loading').hide();			        }			    }			});		});	});/*  */

@@ -1,4 +1,4 @@
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Poppins, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -11,8 +11,15 @@ const inter = Inter({
   display: 'swap',
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: 'swap',
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   display: 'swap',
 });
@@ -41,11 +48,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${manrope.variable} scroll-smooth`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="bg-[#f7f9fc] text-slate-800 antialiased min-h-screen flex flex-col selection:bg-blue-500/20 selection:text-slate-900">
+      <body className="bg-[#f7f9fc] text-[#0B1F3A] antialiased min-h-screen flex flex-col selection:bg-blue-500/20 selection:text-slate-900 font-sans">
         <div className="flex-grow flex flex-col">
           <Header />
           <main className="flex-grow pt-24">
