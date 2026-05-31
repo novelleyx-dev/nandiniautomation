@@ -1051,11 +1051,12 @@ export default function Home() {
 
       {/* Project Case Study Report Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
           <div className="bg-white border border-slate-200 rounded-lg max-w-2xl w-full p-8 shadow-2xl relative text-slate-700 font-sans">
             <button 
-              className="absolute top-4 right-4 text-slate-450 hover:text-slate-800 text-xl"
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xl shadow-sm transition-colors"
               onClick={() => setSelectedProject(null)}
+              aria-label="Close"
             >
               &times;
             </button>

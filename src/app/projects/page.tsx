@@ -188,10 +188,11 @@ export default function ProjectsPage() {
             {/* Header */}
             <div className="bg-[var(--color-ne-blue-corp)] p-6 rounded-t-lg relative">
               <button 
-                className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl cursor-pointer font-light leading-none"
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-white/40 text-white rounded-full text-xl shadow-sm transition-colors"
                 onClick={() => setSelectedProject(null)}
+                aria-label="Close"
               >
-                ×
+                &times;
               </button>
               <span className="text-[10px] font-mono text-[#93c5fd] uppercase tracking-widest block mb-1 font-bold">
                 {INDUSTRY_ICONS[selectedProject.industry] || '🔧'} EPC PROJECT CASE STUDY REPORT — 100% COMMISSIONED
