@@ -1,0 +1,33 @@
+{
+  "title": "Panel Manufacturing",
+  "overview": "We are a CPRI Certified Electrical Control Panel Manufacturer with expertise in designing and manufacturing PCC, MCC, VFD, and PLC Panels. We provide custom-built solutions including Crane Panels, LT, HT, and Hoist Motion systems.",
+  "industries": [
+    "Manufacturing",
+    "Steel",
+    "Cement",
+    "Power Plants",
+    "Pharmaceuticals"
+  ],
+  "brands": [
+    "NE Manufacturing"
+  ],
+  "methodology": [
+    { "step": "Requirement Gathering", "desc": "Understanding load requirements, space constraints, and application specifics." },
+    { "step": "Design & Engineering", "desc": "Drafting schematics, layout drawings, and component selection for optimal performance." },
+    { "step": "Fabrication", "desc": "In-house fabrication using high-quality CRCA and SS304 materials." },
+    { "step": "Assembly & Wiring", "desc": "Precise component mounting and wiring per standard color codes and safety regulations." },
+    { "step": "Testing & QA", "desc": "Rigorous in-house testing including Megger testing, continuity checks, and functional logic tests." },
+    { "step": "Erection & Commissioning", "desc": "On-site installation and integration with field devices and main power sources." }
+  ],
+  "benefits": "Our panels are designed for maximum safety, reliability, and ease of maintenance. The robust construction and use of high-quality components ensure a long operational lifespan even in harsh industrial environments.",
+  "faqs": [
+    {
+      "q": "Are your panels certified?",
+      "a": "Yes, we are a CPRI Certified Electrical Control Panel Manufacturer."
+    },
+    {
+      "q": "Do you handle installation?",
+      "a": "Yes, our service engineers provide comprehensive support for installation, commissioning, and on-site testing."
+    }
+  ]
+}

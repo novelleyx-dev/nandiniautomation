@@ -1,0 +1,39 @@
+{
+  "title": "Engineering Support & Services",
+  "overview": "Our dedicated techno-commercial sales team and highly qualified service engineers combine real-time industry expertise with comprehensive product knowledge to deliver prompt and effective technical support. We are an Authorized Service Center for Yaskawa VFDs.",
+  "industries": [
+    "Manufacturing",
+    "Steel",
+    "Water Treatment",
+    "Power Plants",
+    "Cement",
+    "Oil & Gas",
+    "Food Processing"
+  ],
+  "brands": [
+    "YASKAWA",
+    "ABB",
+    "NE Manufacturing",
+    "Yokogawa",
+    "Honeywell"
+  ],
+  "methodology": [
+    { "step": "Technical Support", "desc": "Prompt and effective technical support via phone and email by our techno-commercial team." },
+    { "step": "In-house Repairs", "desc": "Component-level repair, rigorous testing, original parts replacement, and detailed failure analysis reports." },
+    { "step": "On-site Installation", "desc": "Start-up assistance, wiring checks, and parameter configuration to get systems operational." },
+    { "step": "Preventive Maintenance", "desc": "Scheduled maintenance including cleaning and diagnostics to prevent failures and extend equipment life." },
+    { "step": "Emergency Repair", "desc": "On-site troubleshooting and rapid repair of failures (often within 24 hours)." },
+    { "step": "Retrofits & Upgrades", "desc": "Modernizing older systems with new, energy-efficient, or higher-performance technology." }
+  ],
+  "benefits": "By utilizing our comprehensive support services, you ensure optimal performance and reliability of your machinery. Our exclusive use of genuine parts and rigorous multi-point testing process minimizes turnaround times and significantly reduces costly downtime.",
+  "faqs": [
+    {
+      "q": "Are you an authorized service center for Yaskawa?",
+      "a": "Yes, we are a fully Authorized Service Center for Yaskawa Variable Frequency Drives (VFDs)."
+    },
+    {
+      "q": "How fast can you respond to an emergency breakdown?",
+      "a": "Our highly trained service engineers can typically be on-site within 24 hours of order confirmation."
+    }
+  ]
+}

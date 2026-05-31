@@ -1,0 +1,39 @@
+{
+  "title": "PLC Programming Services",
+  "overview": "Our Programmable Logic Controller (PLC) programming services form the brain of your automated systems. We design, program, and commission robust logic tailored for modern industrial environments, ensuring maximum uptime and efficiency.",
+  "industries": [
+    "Manufacturing",
+    "Steel",
+    "Water Treatment",
+    "Power Plants",
+    "Pharmaceuticals"
+  ],
+  "brands": [
+    "Siemens",
+    "Allen-Bradley",
+    "Mitsubishi",
+    "Delta",
+    "Schneider",
+    "Omron"
+  ],
+  "methodology": [
+    { "step": "Requirement Analysis", "desc": "Detailed study of operational needs and process constraints." },
+    { "step": "Site Survey", "desc": "Evaluating existing infrastructure and hardware constraints." },
+    { "step": "System Design", "desc": "Drafting logic diagrams, I/O lists, and network architecture." },
+    { "step": "Programming", "desc": "Developing structured, modular code following IEC 61131-3 standards." },
+    { "step": "Testing", "desc": "Rigorous simulation and factory acceptance testing (FAT)." },
+    { "step": "Commissioning", "desc": "On-site deployment and site acceptance testing (SAT)." },
+    { "step": "Support", "desc": "24/7 post-deployment monitoring and troubleshooting." }
+  ],
+  "benefits": "By utilizing our PLC programming services, facilities reduce downtime by up to 30%, optimize energy consumption, and benefit from highly traceable and maintainable code structures. Our engineering team ensures that the architecture is scalable, allowing for future expansion without complete system overhauls.",
+  "faqs": [
+    {
+      "q": "Can you upgrade legacy PLC systems without stopping production?",
+      "a": "Yes, we utilize hot-standby systems and phased migration strategies to ensure minimal to zero downtime during legacy system upgrades."
+    },
+    {
+      "q": "What programming languages do you use?",
+      "a": "We primarily use Ladder Logic (LD), Structured Text (ST), and Function Block Diagram (FBD) depending on the complexity of the control task."
+    }
+  ]
+}
