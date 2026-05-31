@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import KnowledgeAssistant from "@/components/Assistant/KnowledgeAssistant";
+import DisableRightClick from "@/components/Layout/DisableRightClick";
 import { Metadata } from 'next';
 
 const inter = Inter({
@@ -46,6 +47,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="bg-[#f7f9fc] text-slate-800 antialiased min-h-screen flex flex-col selection:bg-blue-500/20 selection:text-slate-900">
+        <DisableRightClick />
         <div className="flex-grow flex flex-col">
           <Header />
           <main className="flex-grow pt-24">
