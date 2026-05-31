@@ -1,50 +1,38 @@
 export default function AboutPage() {
   const managementTeam = [
-    { 
-      name: "Mr. Maruti Marlapalle", 
-      title: "Managing Partner", 
-      desc: "Founder of NANDINI ENTERPRISES with a unique blend of core technical & excellent marketing skills for more than 25+ years in Electrical, Instrumentation and Automation. He leads the team with a vision to make the company a leader in the field." 
-    },
-    { 
-      name: "Mrs. Pratima Maruti Marlapalle", 
-      title: "Partner", 
-      desc: "Influential in handling Human Resources, Finance, Purchase, and Service departments since 2011. Certified 'Under 10K Women from IIM Bangalore' and awarded 'Women Entrepreneur of the Year'." 
-    },
-    { 
-      name: "Mr. Narayana Jajala", 
-      title: "Senior General Manager – Projects", 
-      desc: "Electronics and Communication Engineer with over 35 years of senior management experience in Cement, Iron & Steel industries, specializing in strategic planning and project execution." 
-    },
-    { 
-      name: "Mr. B Venkat", 
-      title: "General Manger – Sales & Marketing", 
-      desc: "20+ years of experience handling complete Panel Division starting from Estimations, Manufacturing, and Testing till commissioning. Successfully handled many turnkey projects." 
-    },
-    { 
-      name: "Mr. Srinivas", 
-      title: "Vishakhapatnam Branch Head", 
-      desc: "A well-known networker and influencer in the AP market, associated since the beginning of our career and company incorporation." 
-    },
-    { 
-      name: "Mr. Sanket Badgujar", 
-      title: "Pune Branch Head", 
-      desc: "From a Techno-Financial background, successfully handled many turnkey jobs and projects, with expertise in Water & Waste Water Projects." 
-    },
-    { 
-      name: "Mr. Surya Narayana", 
-      title: "Manager (Design Projects & Engineering)", 
-      desc: "16+ years of experience in the electrical panel industry, heading the Panel Division and overseeing complete operations from estimation to final execution." 
-    },
-    { 
-      name: "Mr. Gangadhar", 
-      title: "Services Manager", 
-      desc: "10+ years of experience in Variable Frequency Drives (VFDs) and specializing in Dyno Drive Test Bench for Indian Railways, crane applications, and controller development." 
-    },
-    { 
-      name: "Mr. Anil Kumar", 
-      title: "Fabrication Manager", 
-      desc: "Automobile Engineer with over 18+ years of experience in tool designing, panel designing, and fabrication." 
-    },
+    { name: "Mr. Maruti Marlapalle", title: "Managing Partner", desc: "Founder of NANDINI ENTERPRISES with a unique blend of core technical & excellent marketing skills for more than 15 Years in Electrical, Instrumentation and Automation." },
+    { name: "Mrs. Pratima Maruti Marlapalle", title: "Partner", desc: "Instrumental in handling Employee Management, Finance, Stock Management and Supplier – Customer relationship since 2011. Awarded 'Successful Women Business Partner' by L&T." },
+    { name: "Mr. Srinivas", title: "Manager Sales & Services - AP", desc: "20+ years experience in Instrumentation & Automation. Maintains excellent business relationships in Steel and Cement Industries." },
+    { name: "Mr. Subrahmanyam Gavalapalli", title: "Manager- Sales and Service - Elevators", desc: "10 years experience with challenging knowledge on Yaskawa Drives and Elevators. Known as the first and best employee of Nandini Enterprises." },
+    { name: "Mr. Kedar Reddy", title: "Manager BD", desc: "B Tech (E&TC) handling YASKAWA Industrial drive sales since 2013. Highly professional techno commercial approach with excellent application knowledge." },
+    { name: "Mrs. Seema Godbole", title: "Operations Management", desc: "Performance Driven Professional with successful operational excellence of over 23 years focusing on maximizing customer satisfaction and process improvement." },
+    { name: "Mr. Sri Bharath", title: "Business Development Manager", desc: "B.E (Electronics and Instrumentation) professional with expertise in Pharmaceutical, Dairy, Infrastructure, Rubber and Wire drawing applications." },
+    { name: "Mr. Ravichandra", title: "Sales & Marketing", desc: "MBA in Marketing and technical degree in Electronics and Communication Engineering focused upon customer satisfaction." },
+    { name: "Mr. B Venkat", title: "Design Manager", desc: "12 years experience handling complete Panel Division from Estimations, Manufacturing, Testing, Inspection, and Erection till commission." },
+    { name: "Mr. Shaik Nazeer", title: "Design & Execution", desc: "25 years experience in Engineering and Erection & Commissioning. Expertise in handling ESP and Boiler Applications." },
+    { name: "Mrs. Sravani", title: "Panel Team Support", desc: "Fast learner with good logical skills making her a multitasking employee assisting in panel design." },
+    { name: "Mr. K. Surya", title: "Panel Design & Testing", desc: "7 years of Experience assisting in panel design and actively involved in testing of panels at the time of Execution." },
+    { name: "Mr. SV Rao", title: "Factory Supervisor", desc: "20 years experience supervising all panel manufacturing & executions at the Factory and managing switchgear procurement." },
+    { name: "Mr. Jayachandra Y.", title: "Projects Head", desc: "Responsible for all project execution starting from Order acceptation, site visit, drawing approval, to dispatch arrangements." },
+    { name: "Mr. Dileep S.", title: "Project & Site Execution", desc: "8 years experience in Project and Site Execution working under the Projects Head." },
+    { name: "Mr. Mohammed Omair Nasser", title: "Senior Service Engineer", desc: "Technically strong senior engineer perfectly suited to work in critical applications since 2013." },
+    { name: "Mr. Durgesh Lalaji", title: "VFD Commissioning & Servicing", desc: "Hands on expertise on Yaskawa VFDs Commissioning, Servicing, and Repairs since 2008." },
+    { name: "Mr. Nagababu K", title: "Service & Projects - AP", desc: "5 years experience handling Government projects and on-site services, currently based in Vishakhapatnam Branch Office." },
+    { name: "Mr. Junaid", title: "VFD, PLC & HMI Service", desc: "Handles service calls individually with a gentle nature that allows for great customer satisfaction." },
+    { name: "Mr. Gangadhar Rao", title: "Dyno Drive & Railways Specialist", desc: "Remarkable job in Railways Dyno Drive Test bench commissioning and maintenance. A great team player." },
+    { name: "Mr. Mithilesh", title: "VFD Installation Expert", desc: "Plays a key role in installations & service related issues, perfectly trained in VFD Installation for all applications." },
+    { name: "Mr. Dnyandev", title: "Installation & Electrical Works", desc: "Shows great interest in learning & growing with the ability to single-handedly install and commission VFDs." },
+    { name: "Mr. Hussain Pasha", title: "Instrumentation Head", desc: "5 years experience in PLC, SCADA, Servo & AC Drives serving various heavy industries and handling service calls." },
+    { name: "Mr. Syed Umais", title: "Industrial Automation Support", desc: "BTECH (ECE) professional with extended support in service calls and project executions." },
+    { name: "Mr. B V Rao", title: "Accounts & Taxation", desc: "15 years of experience in Accounting, Banking, Finance and Taxing handling 2-Digit turnover company Balance Sheets." },
+    { name: "Mr. Narsimulu Bynagari", title: "Tender & ISO Documentations", desc: "6 years experience maintaining Tender, ISO and all finance related Documents. Acts as indirect Human Resource." },
+    { name: "Mr. Sridhar", title: "Payment Follow-up", desc: "Main focus is on Payment Follow up and collection to ensure smooth execution of the organization's Payment Cycle." },
+    { name: "Mrs. Rani Bollam", title: "Purchase Manager", desc: "18 Years experience handling all purchases, E-procurement and E-Tendering for multiple government and corporate bodies." },
+    { name: "Mr. Anil Kumar Sahoo", title: "Digital Marketing & IT", desc: "Designs Brochures, Presentations, maintains the website and looks after E-Tendering and documentation." },
+    { name: "Mr. Puli Srinivas Rao", title: "Stores & Logistics", desc: "15 years experience taking care of all Logistics activities, stock movements, and maintaining stock statements." },
+    { name: "Mr. Ravi", title: "Auditing & Inventory", desc: "25+ years experience contributing to auditing of purchase bills, stock inventory, sales invoices and taxations." },
+    { name: "Mr. Mallikarjuna", title: "Service & Installations", desc: "Expertise in electrical jobs giving an extended hand to the organization in service and site executions." },
+    { name: "Mr. Neelesh", title: "Admin Executive", desc: "Hardworking and dedicated Admin Executive who handles transportation for small dispatches and material procurement." }
   ];
 
   const awards = [
