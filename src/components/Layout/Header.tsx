@@ -2,46 +2,47 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const servicesList = [
-    { name: "Industrial Automation", href: "/services/industrial-automation" },
-    { name: "Electrical Solutions", href: "/services/electrical-solutions" },
-    { name: "SCADA Systems", href: "/services/scada-systems" },
-    { name: "PLC Programming", href: "/services/plc-programming" },
-    { name: "Robotics", href: "/services/robotics" },
-    { name: "Instrumentation", href: "/services/instrumentation" },
-    { name: "VFD Solutions", href: "/services/vfd-solutions" },
-    { name: "AMC Services", href: "/services/amc-services" },
+    { name: 'Industrial Automation', href: '/services/industrial-automation' },
+    { name: 'Electrical Solutions', href: '/services/electrical-solutions' },
+    { name: 'SCADA Systems', href: '/services/scada-systems' },
+    { name: 'PLC Programming', href: '/services/plc-programming' },
+    { name: 'Robotics', href: '/services/robotics' },
+    { name: 'Instrumentation', href: '/services/instrumentation' },
+    { name: 'VFD Solutions', href: '/services/vfd-solutions' },
+    { name: 'AMC Services', href: '/services/amc-services' },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_2px_15px_rgba(0,0,0,0.05)] py-3' 
-        : 'bg-white/60 backdrop-blur-sm border-b border-slate-100 py-5'
-    }`}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+        scrolled 
+          ? 'bg-white/80 backdrop-blur-md border-b border-slate-200/50 shadow-sm py-3' 
+          : 'bg-transparent py-5'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo Section */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex flex-col group">
+        <div className="flex items-center justify-between">
+          
+          {/* Logo */}
+          <div className="flex-shrink-0 z-50">
+            <Link href="/" className="flex flex-col group relative z-50">
               <span className="text-xl sm:text-2xl font-bold tracking-wider text-slate-900 group-hover:text-blue-700 transition-colors duration-300">
                 NANDINI ENTERPRISES
               </span>
@@ -51,186 +52,200 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-6">
-            <Link href="/" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
+          {/* Desktop Nav */}
+          <nav className="hidden xl:flex items-center gap-8">
+            <Link href="/" className="text-slate-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 relative group">
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="/about" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
+            <Link href="/about" className="text-slate-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 relative group">
               About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             
-            {/* Services Dropdown */}
+            {/* Services Dropdown (Framer Motion) */}
             <div 
               className="relative"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
+              onMouseEnter={() => setActiveDropdown('services')}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 focus:outline-none py-2">
+              <button className="flex items-center gap-1 text-slate-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 py-2 group focus:outline-none">
                 Services
-                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
               </button>
               
-              {dropdownOpen && (
-                <div className="absolute top-full left-0 w-64 bg-white border border-slate-200 rounded-md shadow-xl py-2 mt-0 z-50">
-                  <div className="absolute inset-0 bg-gradient-to-b from-blue-50/20 to-transparent pointer-events-none rounded-md" />
-                  {servicesList.map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.href}
-                      className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-700 transition-all duration-200 border-l-2 border-transparent hover:border-blue-700 font-medium"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <AnimatePresence>
+                {activeDropdown === 'services' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 w-[400px] bg-white border border-slate-200/50 rounded-2xl shadow-xl overflow-hidden mt-2 p-2 z-50 grid grid-cols-2 gap-1"
+                  >
+                    {servicesList.map((service, index) => (
+                      <Link
+                        key={index}
+                        href={service.href}
+                        className="flex flex-col px-4 py-3 rounded-xl hover:bg-slate-50 transition-colors duration-200 group/item"
+                      >
+                        <span className="text-sm font-semibold text-slate-700 group-hover/item:text-blue-700">{service.name}</span>
+                        <span className="text-xs text-slate-400 mt-0.5">Explore solutions</span>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            <Link href="/products" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
+            <Link href="/products" className="text-slate-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 relative group">
               Products
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="/projects" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
+            <Link href="/projects" className="text-slate-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 relative group">
               Projects
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="/industries" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
+            <Link href="/industries" className="text-slate-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-300 relative group">
               Industries
-            </Link>
-            <Link href="/gallery" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
-              Gallery
-            </Link>
-            <Link href="/knowledge-center" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
-              Resources
-            </Link>
-            <Link href="/contact" className="text-slate-650 hover:text-blue-700 text-sm font-semibold transition-colors duration-300">
-              Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </nav>
 
-          {/* CTA & Trust Badges */}
-          <div className="hidden xl:flex items-center space-x-4">
-            <div className="flex flex-col text-right font-mono text-[10px] text-slate-500 border-r border-slate-200 pr-4">
-              <span className="text-blue-700 font-bold">ISO 9001:2015</span>
-              <span className="font-semibold">CPRI CERTIFIED</span>
-            </div>
+          {/* Right CTA */}
+          <div className="hidden xl:flex items-center gap-6">
+            <Link href="/knowledge-center" className="text-slate-500 hover:text-slate-800 text-sm font-medium transition-colors">
+              Resources
+            </Link>
             <Link 
               href="/contact?type=quote" 
-              className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-white rounded bg-[#0f4c81] hover:bg-blue-700 shadow-sm transition-colors duration-350"
+              className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-slate-900 rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95"
             >
-              Request Quote
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10 flex items-center gap-2">
+                Request Quote
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="xl:hidden flex items-center">
+          {/* Mobile Toggle */}
+          <div className="xl:hidden z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-100 focus:outline-none"
+              className="p-2 -mr-2 text-slate-600 hover:text-slate-900 focus:outline-none"
             >
-              <svg className="h-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <AnimatePresence mode="wait">
                 {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="w-6 h-6" />
+                  </motion.div>
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu className="w-6 h-6" />
+                  </motion.div>
                 )}
-              </svg>
+              </AnimatePresence>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="xl:hidden bg-white border-b border-slate-200 shadow-lg">
-          <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-            <Link 
-              href="/" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/about" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            
-            {/* Services for Mobile */}
-            <div className="px-3 py-2 text-base font-bold text-slate-400">
-              Services
-            </div>
-            <div className="pl-6 space-y-1">
-              {servicesList.map((service, index) => (
-                <Link
-                  key={index}
-                  href={service.href}
-                  className="block px-3 py-1.5 rounded-md text-sm font-semibold text-slate-600 hover:text-blue-700 hover:bg-slate-50"
-                  onClick={() => setIsOpen(false)}
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-24 pb-6 px-6 xl:hidden overflow-y-auto h-screen"
+          >
+            <div className="flex flex-col gap-6">
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About', href: '/about' },
+                { name: 'Products', href: '/products' },
+                { name: 'Projects', href: '/projects' },
+                { name: 'Industries', href: '/industries' },
+                { name: 'Gallery', href: '/gallery' },
+              ].map((item, idx) => (
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.05 + 0.1 }}
+                  key={item.name}
                 >
-                  {service.name}
-                </Link>
+                  <Link 
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-3xl font-semibold text-slate-800 tracking-tight hover:text-blue-700 transition-colors block"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
-            </div>
 
-            <Link 
-              href="/products" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Products
-            </Link>
-            <Link 
-              href="/projects" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link 
-              href="/industries" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Industries
-            </Link>
-            <Link 
-              href="/gallery" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Gallery
-            </Link>
-            <Link 
-              href="/knowledge-center" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Resources
-            </Link>
-            <Link 
-              href="/contact" 
-              className="block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:text-blue-700 hover:bg-slate-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-            <div className="pt-4 pb-2 border-t border-slate-100">
-              <Link
-                href="/contact?type=quote"
-                className="w-full flex items-center justify-center px-4 py-2.5 bg-[#0f4c81] rounded text-sm font-bold text-white hover:bg-blue-700 transition-colors"
-                onClick={() => setIsOpen(false)}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="mt-4 pt-6 border-t border-slate-200"
               >
-                Request Quote
-              </Link>
+                <div className="text-sm font-bold text-slate-400 mb-4 uppercase tracking-wider">Services</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {servicesList.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={service.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-lg font-medium text-slate-600 hover:text-blue-700 transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="mt-8 flex flex-col gap-4"
+              >
+                <Link 
+                  href="/contact?type=quote" 
+                  onClick={() => setIsOpen(false)}
+                  className="w-full py-4 bg-slate-900 text-white rounded-xl font-semibold text-lg text-center flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                >
+                  Request a Quote
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link 
+                  href="/contact" 
+                  onClick={() => setIsOpen(false)}
+                  className="w-full py-4 bg-slate-100 text-slate-900 rounded-xl font-semibold text-lg text-center hover:bg-slate-200 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </motion.div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

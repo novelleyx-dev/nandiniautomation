@@ -1,7 +1,7 @@
 export default function AboutPage() {
   const managementTeam = [
     { name: "Mr. Maruti Marlapalle", title: "Managing Partner", desc: "Founder of NANDINI ENTERPRISES with a unique blend of core technical & excellent marketing skills for more than 15 Years in Electrical, Instrumentation and Automation." },
-    { name: "Mrs. Pratima Maruti Marlapalle", title: "Partner", desc: "Instrumental in handling Employee Management, Finance, Stock Management and Supplier – Customer relationship since 2011. Awarded 'Successful Women Business Partner' by L&T." },
+    { name: "Mrs. Pratima Maruti Marlapalle", title: "Partner", desc: "Instrumental in handling Employee Management, Finance, Stock Management and Supplier – Customer relationship since 2011. Awarded &apos;Successful Women Business Partner&apos; by L&amp;T." },
     { name: "Mr. Srinivas", title: "Manager Sales & Services - AP", desc: "20+ years experience in Instrumentation & Automation. Maintains excellent business relationships in Steel and Cement Industries." },
     { name: "Mr. Subrahmanyam Gavalapalli", title: "Manager- Sales and Service - Elevators", desc: "10 years experience with challenging knowledge on Yaskawa Drives and Elevators. Known as the first and best employee of Nandini Enterprises." },
     { name: "Mr. Kedar Reddy", title: "Manager BD", desc: "B Tech (E&TC) handling YASKAWA Industrial drive sales since 2013. Highly professional techno commercial approach with excellent application knowledge." },
@@ -26,7 +26,7 @@ export default function AboutPage() {
     { name: "Mr. Syed Umais", title: "Industrial Automation Support", desc: "BTECH (ECE) professional with extended support in service calls and project executions." },
     { name: "Mr. B V Rao", title: "Accounts & Taxation", desc: "15 years of experience in Accounting, Banking, Finance and Taxing handling 2-Digit turnover company Balance Sheets." },
     { name: "Mr. Narsimulu Bynagari", title: "Tender & ISO Documentations", desc: "6 years experience maintaining Tender, ISO and all finance related Documents. Acts as indirect Human Resource." },
-    { name: "Mr. Sridhar", title: "Payment Follow-up", desc: "Main focus is on Payment Follow up and collection to ensure smooth execution of the organization's Payment Cycle." },
+    { name: "Mr. Sridhar", title: "Payment Follow-up", desc: "Main focus is on Payment Follow up and collection to ensure smooth execution of the organization&apos;s Payment Cycle." },
     { name: "Mrs. Rani Bollam", title: "Purchase Manager", desc: "18 Years experience handling all purchases, E-procurement and E-Tendering for multiple government and corporate bodies." },
     { name: "Mr. Anil Kumar Sahoo", title: "Digital Marketing & IT", desc: "Designs Brochures, Presentations, maintains the website and looks after E-Tendering and documentation." },
     { name: "Mr. Puli Srinivas Rao", title: "Stores & Logistics", desc: "15 years experience taking care of all Logistics activities, stock movements, and maintaining stock statements." },
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 About Nandini Enterprises
               </h1>
               <p className="text-base sm:text-lg leading-relaxed text-slate-650">
-                Bringing Excellence in Business relationships and values, our company is a perfect blend of 'highly professional Sales Engineers' and 'strong Technical Service Engineers'.
+                Bringing Excellence in Business relationships and values, our company is a perfect blend of &apos;highly professional Sales Engineers&apos; and &apos;strong Technical Service Engineers&apos;.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="border border-slate-200 bg-[#f7f9fc] rounded px-4 py-2 text-center shadow-xs">
