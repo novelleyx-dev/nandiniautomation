@@ -37,7 +37,7 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-xl space-y-5">
-              <span className="text-xs uppercase tracking-widest text-[#0f4c81] font-mono font-bold block">
+              <span className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold block">
                 B2B EXECUTION LOG — VERIFIED DELIVERIES
               </span>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 font-outfit leading-tight">
@@ -48,23 +48,23 @@ export default function ProjectsPage() {
               </p>
               <div className="flex gap-6 pt-2 font-mono text-xs">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#0f4c81]">15+</div>
+                  <div className="text-2xl font-bold text-[var(--color-ne-blue-corp)]">15+</div>
                   <div className="text-slate-500 uppercase tracking-wider">Case Studies</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#0f4c81]">₹38 Cr+</div>
+                  <div className="text-2xl font-bold text-[var(--color-ne-blue-corp)]">₹38 Cr+</div>
                   <div className="text-slate-500 uppercase tracking-wider">Project Value</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#0f4c81]">9</div>
+                  <div className="text-2xl font-bold text-[var(--color-ne-blue-corp)]">9</div>
                   <div className="text-slate-500 uppercase tracking-wider">Industry Sectors</div>
                 </div>
               </div>
             </div>
             <div className="relative group">
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#0f4c81] to-[#2b6cb0] rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000" />
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-[var(--color-ne-blue-corp)] to-[var(--color-ne-blue-steel)] rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000" />
               <img 
-                src="https://picsum.photos/seed/nandini/800/600" 
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" 
                 alt="Industrial Engineering Project Site" 
                 className="relative rounded-lg shadow-xl object-cover w-full h-[320px]"
               />
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-4 py-2 font-mono text-xs uppercase border rounded cursor-pointer transition-all ${
                   activeFilter === cat
-                    ? 'bg-[#0f4c81] border-[#0f4c81] text-white shadow-xs'
+                    ? 'bg-[var(--color-ne-blue-corp)] border-[var(--color-ne-blue-corp)] text-white shadow-xs'
                     : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400 hover:text-slate-800'
                 }`}
               >
@@ -122,11 +122,11 @@ export default function ProjectsPage() {
             <div 
               key={idx}
               onClick={() => setSelectedProject(project)}
-              className="bg-white hover:bg-slate-50/50 border border-slate-200 hover:border-[#2b6cb0] rounded-lg p-7 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group"
+              className="bg-white hover:bg-slate-50/50 border border-slate-200 hover:border-[var(--color-ne-blue-steel)] rounded-lg p-7 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group"
             >
               {/* Industry Tag */}
               <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] font-mono text-[#0f4c81] uppercase tracking-widest font-bold flex items-center gap-1.5">
+                <span className="text-[10px] font-mono text-[var(--color-ne-blue-corp)] uppercase tracking-widest font-bold flex items-center gap-1.5">
                   <span>{INDUSTRY_ICONS[project.industry] || '🔧'}</span>
                   {project.industry} · {project.location}
                 </span>
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
                 )}
               </div>
               
-              <h3 className="text-slate-900 font-bold text-lg mb-3 font-outfit group-hover:text-[#0f4c81] transition-colors leading-snug">
+              <h3 className="text-slate-900 font-bold text-lg mb-3 font-outfit group-hover:text-[var(--color-ne-blue-corp)] transition-colors leading-snug">
                 {project.title}
               </h3>
               
@@ -146,7 +146,7 @@ export default function ProjectsPage() {
               </p>
 
               {/* Tech snippet */}
-              <div className="text-[10px] font-mono text-[#0f4c81] bg-slate-50 border border-slate-100 rounded px-2 py-1 mb-4 line-clamp-1">
+              <div className="text-[10px] font-mono text-[var(--color-ne-blue-corp)] bg-slate-50 border border-slate-100 rounded px-2 py-1 mb-4 line-clamp-1">
                 {project.tech.split(',')[0].trim()}{project.tech.split(',').length > 1 ? ` + ${project.tech.split(',').length - 1} more...` : ''}
               </div>
               
@@ -157,7 +157,7 @@ export default function ProjectsPage() {
 
               <div className="border-t border-slate-100 pt-4 flex justify-between items-center text-[10px] font-mono">
                 <span className="text-slate-400 uppercase">Client: {project.client.length > 30 ? project.client.substring(0, 30) + '...' : project.client}</span>
-                <span className="text-[#0f4c81] font-bold group-hover:underline">OPEN CASE STUDY →</span>
+                <span className="text-[var(--color-ne-blue-corp)] font-bold group-hover:underline">OPEN CASE STUDY →</span>
               </div>
             </div>
           ))}
@@ -165,15 +165,15 @@ export default function ProjectsPage() {
 
         {/* CTA */}
         <div className="bg-white border border-slate-200 rounded-lg p-8 shadow-sm text-center space-y-4">
-          <h3 className="text-[#0f4c81] font-bold text-xl font-outfit">Have a Similar Project Requirement?</h3>
+          <h3 className="text-[var(--color-ne-blue-corp)] font-bold text-xl font-outfit">Have a Similar Project Requirement?</h3>
           <p className="text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Our engineering team is available to review your project specifications, prepare technical proposals, and conduct site visits. We have executed projects from ₹30 Lakhs to ₹10 Crore in scope across Andhra Pradesh and Telangana.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/contact?type=project" className="bg-[#0f4c81] text-white px-6 py-3 rounded font-mono text-xs uppercase tracking-wider font-bold hover:bg-[#2b6cb0] transition-colors">
+            <Link href="/contact?type=project" className="bg-[var(--color-ne-blue-corp)] text-white px-6 py-3 rounded font-mono text-xs uppercase tracking-wider font-bold hover:bg-[var(--color-ne-blue-steel)] transition-colors">
               Submit Project RFQ →
             </Link>
-            <Link href="/services" className="border border-[#0f4c81] text-[#0f4c81] px-6 py-3 rounded font-mono text-xs uppercase tracking-wider font-bold hover:bg-slate-50 transition-colors">
+            <Link href="/services" className="border border-[var(--color-ne-blue-corp)] text-[var(--color-ne-blue-corp)] px-6 py-3 rounded font-mono text-xs uppercase tracking-wider font-bold hover:bg-slate-50 transition-colors">
               View All Services →
             </Link>
           </div>
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
           <div className="bg-white border border-slate-200 rounded-lg max-w-3xl w-full shadow-2xl relative my-8">
             
             {/* Header */}
-            <div className="bg-[#0f4c81] p-6 rounded-t-lg relative">
+            <div className="bg-[var(--color-ne-blue-corp)] p-6 rounded-t-lg relative">
               <button 
                 className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl cursor-pointer font-light leading-none"
                 onClick={() => setSelectedProject(null)}
@@ -221,13 +221,13 @@ export default function ProjectsPage() {
               
               {/* Scope */}
               <div className="bg-[#f7f9fc] border border-slate-200 rounded p-5">
-                <h4 className="text-xs uppercase text-[#0f4c81] font-mono tracking-wider font-semibold mb-2">1. Project Scope & Deliverables</h4>
+                <h4 className="text-xs uppercase text-[var(--color-ne-blue-corp)] font-mono tracking-wider font-semibold mb-2">1. Project Scope & Deliverables</h4>
                 <p className="leading-relaxed text-slate-655">{selectedProject.scope}</p>
                 {selectedProject.deliverables && (
                   <ul className="mt-3 space-y-1.5 font-mono text-xs text-slate-600">
                     {selectedProject.deliverables.map((d, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-[#0f4c81] font-bold shrink-0">▸</span>
+                        <span className="text-[var(--color-ne-blue-corp)] font-bold shrink-0">▸</span>
                         <span>{d}</span>
                       </li>
                     ))}
@@ -238,7 +238,7 @@ export default function ProjectsPage() {
               {/* Tech */}
               <div>
                 <h4 className="text-xs uppercase text-slate-400 font-mono tracking-wider font-semibold mb-2">2. Hardware & Technologies Deployed</h4>
-                <p className="text-xs font-mono text-[#0f4c81] bg-slate-50 border border-slate-200 rounded p-3 leading-relaxed">{selectedProject.tech}</p>
+                <p className="text-xs font-mono text-[var(--color-ne-blue-corp)] bg-slate-50 border border-slate-200 rounded p-3 leading-relaxed">{selectedProject.tech}</p>
               </div>
 
               {/* Challenges */}
@@ -265,7 +265,7 @@ export default function ProjectsPage() {
               <div className="pt-2 flex gap-3 flex-wrap">
                 <a 
                   href="/contact?type=quote"
-                  className="bg-[#0f4c81] text-white px-5 py-2.5 rounded font-mono text-xs uppercase tracking-wider font-bold hover:bg-[#2b6cb0] transition-colors"
+                  className="bg-[var(--color-ne-blue-corp)] text-white px-5 py-2.5 rounded font-mono text-xs uppercase tracking-wider font-bold hover:bg-[var(--color-ne-blue-steel)] transition-colors"
                 >
                   Request Similar Project →
                 </a>

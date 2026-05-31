@@ -396,7 +396,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {PROJECTS.map((project, idx) => (
+            {PROJECTS.slice(0, 4).map((project, idx) => (
               <div 
                 key={idx}
                 onClick={() => setSelectedProject(project)}
@@ -422,6 +422,15 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link 
+              href="/projects" 
+              className="inline-block px-8 py-4 bg-[var(--color-ne-blue-corp)] hover:bg-[var(--color-ne-blue-steel)] text-white font-bold rounded-lg shadow-lg shadow-blue-900/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-sm uppercase tracking-widest"
+            >
+              View All 500+ Projects & Proof of Execution &rarr;
+            </Link>
           </div>
         </div>
       </section>
