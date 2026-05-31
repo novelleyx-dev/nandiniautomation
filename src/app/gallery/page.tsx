@@ -6,37 +6,37 @@ export default function GalleryPage() {
       title: "Plant Shop Floor Assembly", 
       category: "Fabrication", 
       size: "12,000 Sqft facility layout IDA Cherlapally",
-      src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
+      src: "https://picsum.photos/seed/nandini/800/600"
     },
     { 
       title: "Double Hoisting VFD Panel Testing", 
       category: "Commissioning", 
       size: "Yaskawa A1000 configuration for crane sync",
-      src: "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=800&q=80"
+      src: "https://picsum.photos/seed/nandini/800/600"
     },
     { 
       title: "CPRI Short Circuit Verification", 
       category: "Compliance", 
       size: "Short circuit busbar assembly audit test check",
-      src: "https://images.unsplash.com/photo-1581092162384-8987c17d4e26?auto=format&fit=crop&w=800&q=80"
+      src: "https://picsum.photos/seed/nandini/800/600"
     },
     { 
       title: "Indian Railways Simulator Test Rig", 
       category: "Defense & Rail", 
       size: "Ruggedized telemetry cabinet assembly logs",
-      src: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80"
+      src: "https://picsum.photos/seed/nandini/800/600"
     },
     { 
       title: "120 MLD Pump Station Control Desk", 
       category: "Water Treatment", 
       size: "Main SCADA display monitors loop monitoring",
-      src: "https://images.unsplash.com/photo-1581091870627-77cf02a3a5a6?auto=format&fit=crop&w=800&q=80"
+      src: "https://picsum.photos/seed/nandini/800/600"
     },
     { 
       title: "Women operator CAD schematic layout", 
       category: "Stewardship / Seminar", 
       size: "CAD design training modules",
-      src: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80"
+      src: "https://picsum.photos/seed/nandini/800/600"
     }
   ];
 
@@ -62,7 +62,7 @@ export default function GalleryPage() {
             <div className="relative group">
               <div className="absolute -inset-1.5 bg-gradient-to-r from-[#0f4c81] to-[#2b6cb0] rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000" />
               <img 
-                src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=800&q=80" 
+                src="https://picsum.photos/seed/nandini/800/600" 
                 alt="Engineering Team Seminar" 
                 className="relative rounded-lg shadow-xl object-cover w-full h-[280px]"
               />

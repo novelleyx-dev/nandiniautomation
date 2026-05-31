@@ -28,7 +28,7 @@ export default function CertificationsPage() {
             <div className="relative group">
               <div className="absolute -inset-1.5 bg-gradient-to-r from-[#0f4c81] to-[#2b6cb0] rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000" />
               <img 
-                src="https://images.unsplash.com/photo-1581092162384-8987c17d4e26?auto=format&fit=crop&w=800&q=80" 
+                src="https://picsum.photos/seed/nandini/800/600" 
                 alt="Regulatory Compliance and Industrial Testing" 
                 className="relative rounded-lg shadow-xl object-cover w-full h-[280px]"
               />

@@ -76,26 +76,7 @@ export default function Home() {
 
   // Industry-specific curated high-res Unsplash links for B2B trust
   const getIndustryImage = (slug: string) => {
-    switch (slug) {
-      case 'steel':
-        return "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=400&q=80"; // industrial metal/steel
-      case 'railways':
-        return "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=400&q=80"; // trains/railways
-      case 'cement':
-        return "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&q=80"; // concrete construction/cement
-      case 'power':
-        return "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=400&q=80"; // power transformers/grid
-      case 'oil-gas':
-        return "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80"; // pipes/gas refinery
-      case 'water-treatment':
-        return "https://images.unsplash.com/photo-1581093588401-f3c22d7a1f1b?auto=format&fit=crop&w=400&q=80"; // industrial pump valves
-      case 'pharma':
-        return "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&q=80"; // laboratory/cleanroom
-      case 'food-processing':
-        return "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=80"; // processing conveyor
-      default:
-        return "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80"; // generic automation
-    }
+    return `https://picsum.photos/seed/${slug}/600/400`;
   };
 
   return (
@@ -165,7 +146,7 @@ export default function Home() {
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto w-full max-w-[420px] aspect-[4/5] bg-white border border-slate-200 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" 
+                  src="https://picsum.photos/seed/nandini/800/600" 
                   alt="Industrial Automation Engineer at Control Center"
                   className="w-full h-full object-cover grayscale-[30%] contrast-[110%] sepia-[5%] brightness-[95%]"
                 />
