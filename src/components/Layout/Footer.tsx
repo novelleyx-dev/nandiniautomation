@@ -11,13 +11,19 @@ export default function Footer() {
   const triggerExport = async () => {
     setIsCompiling(true);
     try {
-      const html2canvas = (await import('html2canvas')).default;
-      const canvas = await html2canvas(document.body, {
-        logging: false,
-        useCORS: true,
-        scale: 1,
-      });
-      const base64Image = canvas.toDataURL('image/png');
+      let base64Image = null;
+      try {
+        const html2canvas = (await import('html2canvas')).default;
+        const canvas = await html2canvas(document.body, {
+          logging: false,
+          useCORS: true,
+          scale: 0.5,
+          backgroundColor: '#E8F0FA',
+        });
+        base64Image = canvas.toDataURL('image/jpeg', 0.6);
+      } catch (canvasErr: any) {
+        console.error('Screenshot capture failed, continuing without screenshot:', canvasErr);
+      }
 
       const response = await fetch('/api/export-source', {
         method: 'POST',
@@ -41,11 +47,12 @@ export default function Footer() {
         document.body.removeChild(a);
         URL.revokeObjectURL(downloadUrl);
       } else {
-        alert('Error generating site audit and source export PDF.');
+        const errText = await response.text().catch(() => 'Unknown error');
+        alert(`Error generating site audit and source export PDF: ${errText}`);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      alert('An error occurred during export.');
+      alert(`An error occurred during export: ${err.message || err}`);
     } finally {
       setIsCompiling(false);
     }

@@ -146,22 +146,26 @@ function getSourceFiles(rootDir: string): string[] {
   }
 
   function recurse(dir: string) {
-    const list = fs.readdirSync(dir);
-    for (const item of list) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        if (item !== 'node_modules' && !item.startsWith('.')) {
-          recurse(fullPath);
-        }
-      } else {
-        const ext = path.extname(item);
-        if (['.ts', '.tsx', '.css', '.js', '.mjs', '.json'].includes(ext)) {
-          if (!item.endsWith('.d.ts') && item !== 'package-lock.json') {
-            filesList.push(fullPath);
+    try {
+      const list = fs.readdirSync(dir);
+      for (const item of list) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+          if (item !== 'node_modules' && !item.startsWith('.')) {
+            recurse(fullPath);
+          }
+        } else {
+          const ext = path.extname(item);
+          if (['.ts', '.tsx', '.css', '.js', '.mjs', '.json'].includes(ext)) {
+            if (!item.endsWith('.d.ts') && item !== 'package-lock.json') {
+              filesList.push(fullPath);
+            }
           }
         }
       }
+    } catch (e) {
+      console.error(`Error scanning directory ${dir}:`, e);
     }
   }
 
