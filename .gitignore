@@ -45,3 +45,5 @@ next-env.d.ts
 # Deploy via: vercel --prod  (Vercel CLI directly from this machine)
 src/app/api/export-source/
 src/fonts/
+
+.vercel
