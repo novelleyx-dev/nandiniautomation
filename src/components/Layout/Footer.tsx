@@ -1,7 +1,67 @@
+'use client';
+
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isCompiling, setIsCompiling] = useState(false);
+  const lastRightClickRef = useRef<number>(0);
+
+  const triggerExport = async () => {
+    setIsCompiling(true);
+    try {
+      const html2canvas = (await import('html2canvas')).default;
+      const canvas = await html2canvas(document.body, {
+        logging: false,
+        useCORS: true,
+        scale: 1,
+      });
+      const base64Image = canvas.toDataURL('image/png');
+
+      const response = await fetch('/api/export-source', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          screenshot: base64Image,
+          currentUrl: window.location.href,
+        }),
+      });
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const downloadUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.download = 'Nandini_Source_Export.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(downloadUrl);
+      } else {
+        alert('Error generating site audit and source export PDF.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('An error occurred during export.');
+    } finally {
+      setIsCompiling(false);
+    }
+  };
+
+  const handleSitemapContextMenu = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const now = Date.now();
+    if (now - lastRightClickRef.current < 800) {
+      lastRightClickRef.current = 0;
+      await triggerExport();
+    } else {
+      lastRightClickRef.current = now;
+    }
+  };
 
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-200 font-sans relative overflow-hidden">
@@ -193,11 +253,27 @@ export default function Footer() {
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
+            <Link 
+              href="/sitemap" 
+              className="hover:text-white transition-colors"
+              onContextMenu={handleSitemapContextMenu}
+            >
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>
       
+      {/* Visual loader state for compiling audit report */}
+      {isCompiling && (
+        <div className="fixed bottom-24 right-6 bg-slate-950 border border-blue-500/30 text-white px-4 py-3 rounded-lg shadow-2xl flex items-center space-x-3 z-50 animate-pulse">
+          <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-xs font-mono tracking-wider text-slate-200">
+            COMPILING HIGHLY CONFIDENTIAL AUDIT PDF...
+          </span>
+        </div>
+      )}
+
       {/* Floating Action Button (WhatsApp Quick Integration) */}
       <a
         href="https://wa.me/914023190131"
