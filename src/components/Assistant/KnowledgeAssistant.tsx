@@ -1,183 +1,192 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+
+type Message = {
+  id: number;
+  role: 'bot' | 'user';
+  text: string;
+  links?: { label: string; url: string }[];
+};
 
 export default function KnowledgeAssistant() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentStep, setCurrentStep] = useState<'home' | 'services' | 'contact' | 'quote'>('home');
-  const [quoteForm, setQuoteForm] = useState({ name: '', email: '', details: '' });
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: 1,
+      role: 'bot',
+      text: 'Hello! I am the Nandini Internal Navigation Bot. What specific information or page are you looking for today?',
+    }
+  ]);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const toggleAssistant = () => setIsOpen(!isOpen);
-  const resetAssistant = () => {
-    setCurrentStep('home');
-    setQuoteForm({ name: '', email: '', details: '' });
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isOpen]);
+
+  const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Thank you, ${quoteForm.name}. Your quotation request for: "${quoteForm.details}" has been logged. Our engineering team will contact you at ${quoteForm.email} within 12 hours.`);
-    resetAssistant();
-    setIsOpen(false);
+    if (!input.trim()) return;
+
+    const userMessage: Message = {
+      id: Date.now(),
+      role: 'user',
+      text: input.trim(),
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInput('');
+    
+    // Simulate bot thinking delay
+    setTimeout(() => {
+      generateResponse(userMessage.text);
+    }, 600);
   };
 
-  const renderContent = () => {
-    switch (currentStep) {
-      case 'home':
-        return (
-          <div className="space-y-3">
-            <p className="text-sm text-slate-655 mb-4 leading-relaxed font-sans">
-              Hello, I am the Nandini Enterprises Industrial Guide. How can I direct your inquiry?
-            </p>
-            <button
-              onClick={() => setCurrentStep('services')}
-              className="w-full text-left px-4 py-3 bg-slate-50 hover:bg-slate-100 text-[#0f4c81] hover:text-blue-800 rounded border border-slate-200 transition-all text-sm font-semibold"
-            >
-              Navigate Engineering Services &rarr;
-            </button>
-            <button
-              onClick={() => setCurrentStep('contact')}
-              className="w-full text-left px-4 py-3 bg-slate-50 hover:bg-slate-100 text-[#0f4c81] hover:text-blue-800 rounded border border-slate-200 transition-all text-sm font-semibold"
-            >
-              Contact Support Desk &rarr;
-            </button>
-            <button
-              onClick={() => setCurrentStep('quote')}
-              className="w-full text-left px-4 py-3 bg-gradient-to-r from-blue-50 to-[#eef2f7] hover:from-blue-100 hover:to-slate-200 text-[#0f4c81] hover:text-blue-800 rounded border border-blue-200 transition-all text-sm font-bold"
-            >
-              Request Technical Quotation &rarr;
-            </button>
-          </div>
-        );
-      case 'services':
-        return (
-          <div className="space-y-3">
-            <p className="text-xs text-slate-500 uppercase tracking-wider mb-2 font-bold font-mono">
-              Select Engineering Discipline:
-            </p>
-            {[
-              { label: 'Industrial Automation', href: '/services/industrial-automation' },
-              { label: 'Electrical solutions', href: '/services/electrical-solutions' },
-              { label: 'PLC Programming', href: '/services/plc-programming' },
-              { label: 'VFD & Drive Systems', href: '/services/vfd-solutions' },
-            ].map((item, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  window.location.href = item.href;
-                  setIsOpen(false);
-                }}
-                className="w-full text-left px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-700 hover:text-[#0f4c81] rounded border border-slate-200 transition-all text-sm font-medium"
-              >
-                {item.label}
-              </button>
-            ))}
-            <button
-              className="w-full text-center py-2 text-xs text-slate-500 hover:text-blue-700 mt-2 font-bold font-mono"
-              onClick={() => setCurrentStep('home')}
-            >
-              &larr; Back to Main Options
-            </button>
-          </div>
-        );
-      case 'contact':
-        return (
-          <div className="space-y-3">
-            <p className="text-xs text-slate-500 uppercase tracking-wider mb-2 font-bold font-mono">
-              Connect Channels:
-            </p>
-            <a
-              href="mailto:info@nandiniautomation.com"
-              className="block w-full text-left px-4 py-3 bg-white hover:bg-slate-50 text-slate-750 hover:text-[#0f4c81] rounded border border-slate-200 text-sm font-semibold transition-colors"
-            >
-              Email Engineering Team
-              <span className="block text-[10px] text-slate-400 font-mono font-medium">info@nandiniautomation.com</span>
-            </a>
-            <a
-              href="tel:+914023190131"
-              className="block w-full text-left px-4 py-3 bg-white hover:bg-slate-50 text-slate-755 hover:text-[#0f4c81] rounded border border-slate-200 text-sm font-semibold transition-colors"
-            >
-              Direct Support Hotline
-              <span className="block text-[10px] text-slate-400 font-mono font-medium">+91-40-23190131</span>
-            </a>
-            <button
-              className="w-full text-center py-2 text-xs text-slate-500 hover:text-blue-700 mt-2 font-bold font-mono"
-              onClick={() => setCurrentStep('home')}
-            >
-              &larr; Back to Main Options
-            </button>
-          </div>
-        );
-      case 'quote':
-        return (
-          <form onSubmit={handleSubmit} className="space-y-3">
-            <p className="text-xs text-slate-500 mb-2 leading-relaxed font-sans">
-              Submit your RFQ / requirements detail for instant engineering assessment.
-            </p>
-            <input
-              type="text"
-              placeholder="Your Name / Organization"
-              required
-              value={quoteForm.name}
-              onChange={(e) => setQuoteForm({ ...quoteForm, name: e.target.value })}
-              className="w-full px-3 py-2 bg-white border border-slate-200 rounded text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              required
-              value={quoteForm.email}
-              onChange={(e) => setQuoteForm({ ...quoteForm, email: e.target.value })}
-              className="w-full px-3 py-2 bg-white border border-slate-200 rounded text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500"
-            />
-            <textarea
-              placeholder="Describe panel, VFD or automation project scope..."
-              required
-              rows={3}
-              value={quoteForm.details}
-              onChange={(e) => setQuoteForm({ ...quoteForm, details: e.target.value })}
-              className="w-full px-3 py-2 bg-white border border-slate-200 rounded text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full py-2.5 bg-gradient-to-r from-[#0f4c81] to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded text-xs uppercase tracking-wider transition-all"
-            >
-              Submit Requirements
-            </button>
-            <button
-              type="button"
-              className="w-full text-center py-1.5 text-xs text-slate-500 hover:text-blue-700 font-bold font-mono"
-              onClick={() => setCurrentStep('home')}
-            >
-              &larr; Cancel Request
-            </button>
-          </form>
-        );
+  const generateResponse = (query: string) => {
+    const q = query.toLowerCase();
+    let botMessage: Message = {
+      id: Date.now() + 1,
+      role: 'bot',
+      text: 'I can help you navigate to Projects, Services, Contact details, or Company Information. Could you clarify what you are looking for?',
+    };
+
+    if (q.includes('project') || q.includes('case') || q.includes('proof') || q.includes('execution')) {
+      botMessage = {
+        id: Date.now() + 1,
+        role: 'bot',
+        text: 'We have over 500+ Large-Scale Turnkey EPC Projects commissioned nationwide. You can view the complete execution log and case studies here:',
+        links: [{ label: 'View All Projects', url: '/projects' }],
+      };
+    } else if (q.includes('service') || q.includes('automation') || q.includes('panel') || q.includes('vfd')) {
+      botMessage = {
+        id: Date.now() + 1,
+        role: 'bot',
+        text: 'We specialize in Industrial Automation, Panel Manufacturing, SCADA Systems, and VFD solutions. Check our complete service pipeline:',
+        links: [
+          { label: 'All Services', url: '/services' },
+          { label: 'Control Panels', url: '/services/control-panels' },
+          { label: 'Industrial Automation', url: '/services/industrial-automation' }
+        ],
+      };
+    } else if (q.includes('contact') || q.includes('phone') || q.includes('email') || q.includes('quote')) {
+      botMessage = {
+        id: Date.now() + 1,
+        role: 'bot',
+        text: 'You can reach our engineering team directly via phone (+91-40-23190131) or email (info@nandiniautomation.com). Need a quote?',
+        links: [{ label: 'Contact Support Desk', url: '/contact' }],
+      };
+    } else if (q.includes('about') || q.includes('company') || q.includes('profile')) {
+      botMessage = {
+        id: Date.now() + 1,
+        role: 'bot',
+        text: 'Nandini Enterprises is an ISO 9001:2015 certified engineering partner for heavy-scale industries across India.',
+        links: [{ label: 'About Us', url: '/about' }],
+      };
+    } else if (q.includes('industry') || q.includes('sectors') || q.includes('where')) {
+      botMessage = {
+        id: Date.now() + 1,
+        role: 'bot',
+        text: 'We provide robust automation and electrical solutions for core sectors like Steel, Cement, Oil & Gas, Water Treatment, and Pharma.',
+        links: [{ label: 'View Industries', url: '/industries' }],
+      };
     }
+
+    setMessages((prev) => [...prev, botMessage]);
   };
 
   return (
-    <div className="fixed bottom-24 right-6 z-55 font-sans">
+    <div className="fixed bottom-24 right-6 z-50 font-sans">
       {isOpen && (
-        <div className="w-80 bg-white border border-slate-200 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col transition-all duration-300">
+        <div className="w-[340px] bg-white border border-slate-200 rounded-xl shadow-2xl flex flex-col transition-all duration-300 h-[480px] overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#0f4c81] to-[#2b6cb0] px-4 py-3 border-b border-slate-200 flex justify-between items-center text-white">
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-white font-bold font-mono">
-                Knowledge Assistant
-              </h4>
-              <span className="text-[9px] text-blue-100">Nandini Automation Portal</span>
+          <div className="bg-gradient-to-r from-[var(--color-ne-blue-corp)] to-[var(--color-ne-blue-steel)] px-4 py-3 border-b border-slate-200 flex justify-between items-center text-white shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-xs uppercase tracking-widest text-white font-bold font-mono">
+                  Site Assistant
+                </h4>
+                <span className="text-[9px] text-blue-100 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online
+                </span>
+              </div>
             </div>
             <button
-              className="text-white hover:text-blue-100 transition-colors text-lg focus:outline-none"
+              className="text-white hover:text-blue-100 transition-colors p-1 focus:outline-none"
               onClick={toggleAssistant}
             >
-              &times;
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
           
-          {/* Body */}
-          <div className="p-4 bg-white max-h-[360px] overflow-y-auto">
-            {renderContent()}
+          {/* Chat History */}
+          <div className="flex-1 p-4 bg-[#f7f9fc] overflow-y-auto flex flex-col gap-4">
+            {messages.map((msg) => (
+              <div key={msg.id} className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
+                <div 
+                  className={`max-w-[85%] px-4 py-2.5 rounded-2xl text-sm ${
+                    msg.role === 'user' 
+                      ? 'bg-[var(--color-ne-blue-corp)] text-white rounded-br-none shadow-sm' 
+                      : 'bg-white text-slate-700 border border-slate-200 rounded-bl-none shadow-sm'
+                  }`}
+                >
+                  <p className="leading-relaxed">{msg.text}</p>
+                </div>
+                
+                {msg.links && (
+                  <div className="flex flex-col gap-2 mt-2 w-[85%]">
+                    {msg.links.map((link, idx) => (
+                      <Link 
+                        key={idx} 
+                        href={link.url}
+                        onClick={() => setIsOpen(false)}
+                        className="inline-block text-center px-4 py-2 bg-white border border-[var(--color-ne-blue-corp)] text-[var(--color-ne-blue-corp)] hover:bg-[var(--color-ne-blue-corp)] hover:text-white rounded-lg text-xs font-bold transition-colors shadow-sm"
+                      >
+                        {link.label} &rarr;
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Input Area */}
+          <div className="p-3 bg-white border-t border-slate-200">
+            <form onSubmit={handleSend} className="flex gap-2">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Ask me anything..."
+                className="flex-1 px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[var(--color-ne-blue-corp)] focus:ring-1 focus:ring-[var(--color-ne-blue-corp)] transition-all"
+              />
+              <button
+                type="submit"
+                disabled={!input.trim()}
+                className="p-2.5 bg-[var(--color-ne-blue-corp)] hover:bg-[var(--color-ne-blue-steel)] disabled:bg-slate-300 text-white rounded-lg shadow-sm transition-colors flex items-center justify-center"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       )}
@@ -186,13 +195,14 @@ export default function KnowledgeAssistant() {
       {!isOpen && (
         <button
           onClick={toggleAssistant}
-          className="bg-white hover:bg-slate-50 text-[#0f4c81] border border-slate-200 p-4 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center hover:scale-105 transition-all duration-300 relative group"
+          className="bg-white hover:bg-slate-50 text-[var(--color-ne-blue-corp)] border border-slate-200 p-4 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center hover:scale-105 transition-all duration-300 relative group"
         >
-          <svg className="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
           </svg>
-          <span className="absolute right-full mr-3 bg-white border border-slate-200 text-[10px] text-slate-800 px-2 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition-opacity font-mono tracking-wider whitespace-nowrap">
-            Support Agent
+          <span className="absolute right-full mr-4 bg-slate-800 text-white text-[11px] px-3 py-1.5 rounded-lg shadow opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-medium flex items-center gap-2">
+            Ask Assistant
+            <span className="absolute right-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 bg-slate-800 transform rotate-45"></span>
           </span>
         </button>
       )}
