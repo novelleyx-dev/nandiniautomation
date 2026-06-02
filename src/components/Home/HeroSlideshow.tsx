@@ -21,7 +21,7 @@ export default function HeroSlideshow() {
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 overflow-hidden border-b border-slate-200/60 bg-[#E8F0FA]">
+    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden border-b border-slate-200/60 bg-[#E8F0FA]">
       {/* Slideshow Background */}
       {slides.map((slide, index) => (
         <div
@@ -75,27 +75,7 @@ export default function HeroSlideshow() {
           </a>
         </div>
 
-        {/* Floating industrial badging indicators */}
-        <div className="mt-16 pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs font-mono w-full max-w-3xl justify-items-end text-right">
-          <div className="group flex flex-col items-end">
-            <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">CPRI TESTED</span>
-            <span className="text-slate-300 text-[10px] mt-1">Busbars certified</span>
-          </div>
-          <div className="group flex flex-col items-end">
-            <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">33KV LICENSE</span>
-            <span className="text-slate-300 text-[10px] mt-1">Government approved</span>
-          </div>
-          <div className="group flex flex-col items-end">
-            <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">YASKAWA</span>
-            <span className="text-slate-300 text-[10px] mt-1">Authorized warranty</span>
-          </div>
-          <div className="group flex flex-col items-end">
-            <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">ABB PARTNER</span>
-            <span className="text-slate-300 text-[10px] mt-1">Authorized integration</span>
-          </div>
-        </div>
 
-      </div>
     </section>
   );
 }

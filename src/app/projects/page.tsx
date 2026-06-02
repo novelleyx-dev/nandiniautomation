@@ -182,8 +182,8 @@ export default function ProjectsPage() {
 
       {/* Case Study Detail Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
-          <div className="bg-white border border-slate-200 rounded-lg max-w-3xl w-full shadow-2xl relative my-8">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm z-[100]">
+          <div className="bg-white border border-slate-200 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative my-auto">
             
             {/* Header */}
             <div className="bg-[var(--color-ne-blue-corp)] p-6 rounded-t-lg relative">

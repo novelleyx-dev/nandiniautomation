@@ -585,56 +585,7 @@ export default function Home() {
 
 
 
-      {/* 9. CERTIFICATIONS & COMPLIANCE SECTION */}
-      <section id="certifications" className="py-20 relative bg-[#E8F0FA] border-b border-slate-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold mb-3">
-              Standard Compliance
-            </h2>
-            <p className="text-3xl font-extrabold text-slate-900 font-outfit">
-              Statutory Registration, Compliance & Quality Licenses
-            </p>
-            <p className="text-slate-500 text-sm mt-4">
-              We maintain absolute compliance with state and central regulatory frameworks. Click any certificate card below to view verification details.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {CERTIFICATIONS.map((cert, index) => (
-              <div
-                key={index}
-                onClick={() => setSelectedCert(cert)}
-                className="bg-white border border-slate-200 hover:border-blue-300 rounded shadow-sm hover:shadow-md p-6 cursor-pointer transition-all flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="w-8 h-8 rounded bg-blue-50 border border-blue-200 flex items-center justify-center text-[var(--color-ne-blue-corp)] font-bold mb-4 font-mono text-xs">
-                    0{index + 1}
-                  </div>
-                  <h3 className="text-slate-900 font-bold text-sm mb-2 font-outfit group-hover:text-blue-700 transition-colors">
-                    {cert.name}
-                  </h3>
-                  <p className="text-slate-450 text-[10px] font-mono mb-4">
-                    Doc Ref: {cert.number}
-                  </p>
-                </div>
-                <span className="text-[10px] text-[var(--color-ne-blue-corp)] font-bold font-mono tracking-wider">
-                  VIEW COMPLIANCE &rarr;
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Detailed supplementary listing */}
-          <div className="mt-12 bg-white border border-slate-200 p-6 rounded text-center max-w-4xl mx-auto shadow-sm">
-            <p className="text-xs text-slate-500 leading-relaxed font-mono font-medium">
-              Additional Registrations: GST Certificate &bull; Import Export Code (IEC) &bull; Provident Fund (EPF) Registration &bull; Employee State Insurance (ESI) &bull; UDYAM MSME Registration. 
-              <br />
-              <span className="text-[10px] text-slate-400 block mt-2">All credential verification documents can be requested from info@nandiniautomation.com</span>
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* 10. ABOUT COMPANY SECTION */}
       <section id="about" className="py-20 relative bg-white border-b border-slate-200/60">
