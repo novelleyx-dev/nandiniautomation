@@ -257,7 +257,7 @@ export default function Footer() {
 
         {/* Footer bottom */}
         <div className="mt-6 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-500">
-          <p>&copy; {currentYear} Nandini Enterprises. All Rights Reserved. ISO 9001:2015 Certified.</p>
+          <p>&copy; {currentYear} Nandini Enterprises. Designed and reserved rights belongs to Novelleyx. ISO 9001:2015 Certified.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
