@@ -12,6 +12,7 @@
   
   --font-sans: var(--font-barlow), sans-serif;
   --font-outfit: var(--font-barlow), sans-serif;
+  --font-mono: var(--font-barlow), sans-serif;
 }
 
 /* Custom Overrides & Scroll Behaviors */
