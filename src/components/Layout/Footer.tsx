@@ -287,7 +287,7 @@ export default function Footer() {
         href="https://wa.me/914023190131"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-[76px] z-50 bg-green-600 hover:bg-green-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 group"
+        className="fixed bottom-6 right-[88px] z-50 bg-green-600 hover:bg-green-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 group"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.49 1.97 14.027 1.968 11.4 1.968 5.965 1.968 1.54 6.338 1.536 11.77c-.001 1.733.468 3.425 1.357 4.92l-.994 3.633 3.734-.97a9.702 9.702 0 004.42 1.077zM17.13 14.18c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.62.14-.18.28-.68.86-.83 1.03-.15.17-.3.19-.58.05-1.28-.64-2.14-1.12-2.98-2.56-.22-.38.22-.35.63-1.15.07-.14.03-.27-.02-.37-.05-.09-.43-1.03-.59-1.41-.16-.38-.32-.33-.44-.33h-.37c-.13 0-.34.05-.52.24-.18.19-.68.66-.68 1.61 0 .95.69 1.87.79 2.01.1.14 1.36 2.08 3.29 2.91.46.2 1.03.32 1.39.43.54.17 1.03.15 1.42.09.43-.06 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.17-.53-.31z"/>

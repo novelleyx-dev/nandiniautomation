@@ -42,7 +42,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="bg-[#E8F0FA] text-slate-800 antialiased min-h-screen flex flex-col selection:bg-blue-500/20 selection:text-slate-900">
-        <DisableRightClick />
+        
         <div className="flex-grow flex flex-col">
           <Header />
           <main className="flex-grow pt-24">

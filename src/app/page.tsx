@@ -706,9 +706,9 @@ export default function Home() {
               <p className="text-xs text-slate-500 font-sans mb-6">
                 Detailed functional control sequence logic flowchart matching HMWSSB&apos;s main water pumping loops.
               </p>
-              <span className="text-[var(--color-ne-blue-corp)] font-bold cursor-pointer" onClick={() => alert("Loading layout schematic schematic_HMWSSB_v1.2.pdf...")}>
+              <a href="/schematic_HMWSSB_v1.2.pdf" download="schematic_HMWSSB_v1.2.pdf" className="text-[var(--color-ne-blue-corp)] font-bold cursor-pointer hover:underline block">
                 Open Engineering Drawing &rarr;
-              </span>
+              </a>
             </div>
 
             <div className="bg-[#E8F0FA] border border-slate-200 rounded-lg p-6 hover:border-blue-300 shadow-sm transition-all">
@@ -719,11 +719,8 @@ export default function Home() {
               </p>
               <a 
                 href="/NE_Profile_2026.pdf" 
+                download="NE_Profile_2026.pdf"
                 className="text-[var(--color-ne-blue-corp)] font-bold hover:underline block"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert("Converting the profile profile_2026 to PDF download stream. Completed!");
-                }}
               >
                 Download PDF Brochure &darr;
               </a>
