@@ -21,7 +21,7 @@ export default function HeroSlideshow() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden border-b border-slate-200/60 bg-[#E8F0FA]">
+    <section className="relative -mt-24 min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden border-b border-slate-200/60 bg-[#E8F0FA]">
       {/* Slideshow Background */}
       {slides.map((slide, index) => (
         <div
