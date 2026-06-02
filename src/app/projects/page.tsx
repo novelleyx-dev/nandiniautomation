@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                 Industrial Case Studies & EPC Projects
               </h1>
               <p className="text-base sm:text-lg leading-relaxed text-slate-600">
-                A record of our completed turnkey engineering deliveries across heavy industry sectors. Each case study documents the client requirement, engineering challenge, technology deployed, and verified operational outcome.
+                A proven track record of reliable, high-performance turnkey engineering deliveries. Backed by 25+ years of operational excellence, our case studies showcase our unwavering commitment to safety, compliance, and on-time execution—giving new clients complete peace of mind when partnering with us for mission-critical automation.
               </p>
               <div className="flex gap-6 pt-2 font-mono text-xs">
                 <div className="text-center">

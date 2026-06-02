@@ -34,19 +34,19 @@ export default function HeroSlideshow() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide})` }}
           />
-          {/* Dark Overlay for Text Visibility */}
-          <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#E8F0FA]/20 to-transparent" />
+          {/* Light Blue Gray Overlay for Text Visibility */}
+          <div className="absolute inset-0 bg-slate-500/30 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-900/30 to-[#0A3D91]/70" />
         </div>
       ))}
 
       {/* Subtle engineering blueprint matrix grid over the images */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10 pointer-events-none" />
 
-      {/* Centered Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center flex flex-col items-center">
+      {/* Right Aligned Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-right flex flex-col items-end justify-center h-full">
         
-        <div className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-xs font-mono font-bold text-white shadow-lg mb-8">
+        <div className="inline-flex items-center justify-end space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-xs font-mono font-bold text-white shadow-lg mb-8">
           <span className="flex h-2 w-2 relative">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
@@ -66,7 +66,7 @@ export default function HeroSlideshow() {
         </p>
         
         {/* CTAs */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-end gap-4 w-full">
           <a href="#products" className="px-8 py-4 bg-[var(--color-ne-blue-corp)] hover:bg-[var(--color-ne-blue-steel)] text-white font-bold rounded shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-sm uppercase tracking-widest border border-blue-400/30">
             Explore Solutions
           </a>
@@ -76,20 +76,20 @@ export default function HeroSlideshow() {
         </div>
 
         {/* Floating industrial badging indicators */}
-        <div className="mt-16 pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs font-mono w-full max-w-3xl">
-          <div className="group flex flex-col items-center">
+        <div className="mt-16 pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs font-mono w-full max-w-3xl justify-items-end text-right">
+          <div className="group flex flex-col items-end">
             <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">CPRI TESTED</span>
             <span className="text-slate-300 text-[10px] mt-1">Busbars certified</span>
           </div>
-          <div className="group flex flex-col items-center">
+          <div className="group flex flex-col items-end">
             <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">33KV LICENSE</span>
             <span className="text-slate-300 text-[10px] mt-1">Government approved</span>
           </div>
-          <div className="group flex flex-col items-center">
+          <div className="group flex flex-col items-end">
             <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">YASKAWA</span>
             <span className="text-slate-300 text-[10px] mt-1">Authorized warranty</span>
           </div>
-          <div className="group flex flex-col items-center">
+          <div className="group flex flex-col items-end">
             <span className="block text-blue-300 font-bold group-hover:text-blue-200 transition-colors">ABB PARTNER</span>
             <span className="text-slate-300 text-[10px] mt-1">Authorized integration</span>
           </div>

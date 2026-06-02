@@ -1,4 +1,4 @@
-import { Inter, Outfit } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -6,14 +6,9 @@ import KnowledgeAssistant from "@/components/Assistant/KnowledgeAssistant";
 import DisableRightClick from "@/components/Layout/DisableRightClick";
 import { Metadata } from 'next';
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: 'swap',
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
+const barlow = Barlow({
+  variable: "--font-barlow",
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ["latin"],
   display: 'swap',
 });
@@ -42,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
+    <html lang="en" className={`${barlow.variable} scroll-smooth`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>

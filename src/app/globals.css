@@ -10,14 +10,34 @@
   --color-ne-text-dark: #0B1F3A; /* Navy Blue */
   --color-ne-text-muted: #64748b;
   
-  --font-sans: var(--font-inter), sans-serif;
-  --font-outfit: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-barlow), sans-serif;
+  --font-outfit: var(--font-barlow), sans-serif;
 }
 
 /* Custom Overrides & Scroll Behaviors */
 html, body {
   background-color: #E8F0FA; /* bg-ne-bg */
   color: #1e293b; /* text-ne-text-dark */
+  font-family: var(--font-sans);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 /* Custom scrollbar matching corporate theme */

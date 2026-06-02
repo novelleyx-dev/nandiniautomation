@@ -135,6 +135,46 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <HeroSlideshow />
 
+      {/* 8. PARTNERS & ASSOCIATIONS (Moved below Hero) */}
+      <section className="py-8 bg-white border-b border-slate-200/60 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
+          <h2 className="text-[10px] uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold">
+            AUTHORIZED ASSOCIATIONS & OEM CHANNELS
+          </h2>
+        </div>
+        <div className="relative w-full overflow-hidden">
+          <div className="animate-marquee flex gap-6 px-4">
+            {/* Repeat list twice for smooth continuous scroll */}
+            {[...Array(2)].map((_, arrayIdx) => (
+              <div key={arrayIdx} className="flex gap-6 shrink-0">
+                {[
+                  { name: 'YASKAWA', desc: 'Authorized Service Center for Variable Frequency Drives (VFDs)', url: 'https://www.yaskawaindia.in/' },
+                  { name: 'ABB', desc: 'Authorized Channel Partner for Drives & Automation panels', url: 'https://new.abb.com/indian-subcontinent' },
+                  { name: 'BAUMER', desc: 'Authorized System Integrator for Process Sensors', url: 'https://www.baumer.com/' },
+                  { name: 'SIEMENS', desc: 'Industrial System Partner for PLC, SCADA, & Switchgears', url: 'https://www.siemens.com/' },
+                  { name: 'YOKOGAWA', desc: 'Process Control Integration & Instrument Config partner', url: 'https://www.yokogawa.com/' }
+                ].map((partner, idx) => (
+                  <a 
+                    key={`${arrayIdx}-${idx}`}
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-[280px] shrink-0 bg-[#E8F0FA] border border-slate-200 p-6 rounded flex flex-col justify-center hover:border-blue-300 shadow-sm transition-all cursor-pointer group text-center"
+                  >
+                    <span className="text-[var(--color-ne-blue-corp)] font-extrabold text-lg tracking-widest font-mono group-hover:text-blue-700 transition-colors">
+                      {partner.name}
+                    </span>
+                    <span className="text-[10px] text-slate-500 mt-2 leading-normal font-sans font-medium">
+                      {partner.desc}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 2. TRUST & SCALE SECTION */}
       <section className="bg-white py-16 relative border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -543,38 +583,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. PARTNERS & ASSOCIATIONS */}
-      <section className="py-16 bg-white border-b border-slate-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xs uppercase tracking-widest text-[var(--color-ne-blue-corp)] font-mono font-bold mb-10">
-            AUTHORIZED ASSOCIATIONS & OEM CHANNELS
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[
-              { name: 'YASKAWA', desc: 'Authorized Service Center for Variable Frequency Drives (VFDs)', url: 'https://www.yaskawaindia.in/' },
-              { name: 'ABB', desc: 'Authorized Channel Partner for Drives & Automation panels', url: 'https://new.abb.com/indian-subcontinent' },
-              { name: 'BAUMER', desc: 'Authorized System Integrator for Process Sensors', url: 'https://www.baumer.com/' },
-              { name: 'SIEMENS', desc: 'Industrial System Partner for PLC, SCADA, & Switchgears', url: 'https://www.siemens.com/' },
-              { name: 'YOKOGAWA', desc: 'Process Control Integration & Instrument Config partner', url: 'https://www.yokogawa.com/' }
-            ].map((partner, idx) => (
-              <a 
-                key={idx}
-                href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#E8F0FA] border border-slate-200 p-6 rounded flex flex-col justify-between hover:border-blue-300 shadow-sm transition-all cursor-pointer group"
-              >
-                <span className="text-[var(--color-ne-blue-corp)] font-extrabold text-lg tracking-widest font-mono group-hover:text-blue-700 transition-colors">
-                  {partner.name}
-                </span>
-                <span className="text-[10px] text-slate-500 mt-4 leading-normal font-sans font-medium">
-                  {partner.desc}
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 9. CERTIFICATIONS & COMPLIANCE SECTION */}
       <section id="certifications" className="py-20 relative bg-[#E8F0FA] border-b border-slate-200/60">
