@@ -24,9 +24,17 @@ export default async function ServicesPage() {
                 Engineering Divisions & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-ne-blue-corp)] to-[var(--color-ne-blue-steel)]">Services</span>
               </h1>
               <p className="text-base sm:text-lg leading-relaxed text-slate-600 font-medium">
-                Nandini Enterprises offers a high-performance backup maintenance ecosystem. 
-                We are equipped with advanced testing devices and custom diagnostic equipment.
+                Nandini Enterprises delivers end-to-end industrial automation, electrical engineering, and robust control panel manufacturing solutions. With over two decades of operational excellence across heavy industries, we build high-performance ecosystems tailored to your exact specifications. Our facility is equipped with advanced testing labs and custom diagnostic equipment to ensure unmatched reliability, compliance, and precision for every deployed system.
               </p>
+              
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Link href="/contact" className="bg-[var(--color-ne-blue-corp)] hover:bg-[var(--color-ne-blue-steel)] text-white px-6 py-3 rounded font-mono text-xs uppercase tracking-wider font-bold shadow-lg transition-all hover:-translate-y-1 text-center">
+                  Consult an Engineer
+                </Link>
+                <a href="#services-grid" className="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 px-6 py-3 rounded font-mono text-xs uppercase tracking-wider font-bold shadow-sm transition-all text-center">
+                  Explore Capabilities &darr;
+                </a>
+              </div>
             </div>
             
             <div className="relative group">
@@ -51,7 +59,7 @@ export default async function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="services-grid" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
