@@ -74,8 +74,6 @@ export default function HeroSlideshow() {
             Request Consultation
           </a>
         </div>
-        </div>
-
       </div>
     </section>
   );
